@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ngaji.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25">
+            <Grid >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Image
+                    Source="logo.png"
+                    HeightRequest="24"
+                    WidthRequest="34"
+                    Margin="16,12,16,12"
+                    Aspect="AspectFit"
+                    Grid.Column="0"
+                    HorizontalOptions="Start"/>
+                <HorizontalStackLayout Grid.Row="0"
+                    Grid.Column="1"
+                    HorizontalOptions="End" >
+                    <Button Text="Masuk"
+                            class="Rounded"
+                            CornerRadius="32"
+                            Padding="16,12,16,12"
+                            FontFamily="Nunito"
+                            FontSize="16"
+                            BorderColor="Transparent"
+                            TextColor="{StaticResource Primary}"
+                            BackgroundColor="Transparent"
+                            HorizontalOptions="End"
+                            VerticalOptions="Center"
+                            WidthRequest="82"
+                            HeightRequest="40"  />
+
+                    <Button Text="Daftar"
+                            class="Rounded"
+                            CornerRadius="16"
+                            Padding="16,12,16,12"
+                            FontSize="16"
+                            FontFamily="Nunito"
+                            TextColor="White"
+                            FontAttributes="Bold"
+                            BorderColor="Transparent"
+                            BackgroundColor="{StaticResource Primary}"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            WidthRequest="82"
+                            HeightRequest="40"/>
+                </HorizontalStackLayout>
+            </Grid>
+            <Frame
+                BorderColor="Black"
+                BackgroundColor="Transparent"
+                CornerRadius="16"
+                Padding="0"
+                WidthRequest="280"
+                Scale="1.4"
+                HeightRequest="32"
+                IsClippedToBounds="True"
+                HorizontalOptions="Center"
+                VerticalOptions="Center" >
+                <SearchBar Text="Mulai Mengaji Sekarang" 
+                       FlowDirection="RightToLeft" 
+                       Margin="28,0,28,0"
+                       PlaceholderColor="Black"
+                       FontSize="16"
+                       FontFamily="Nunito"
+                       Background="Transparent"
+                       HorizontalTextAlignment="End"
+                       VerticalOptions="Center"
+                       VerticalTextAlignment="Center"
+                       HorizontalOptions="CenterAndExpand"
+                       />
+            </Frame>
+            <Label
+                Text="Ustadz Di Sekitarmu"
+                SemanticProperties.HeadingLevel="Level1"
+                BackgroundColor="Transparent"
+                Margin="48,52,48,0"
+                FontFamily="Nunito"
+                FontSize="28"
+                LineHeight="28"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Welcome to .NET Multi-platform App UI"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="CounterBtn"
+                Text="Click me"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

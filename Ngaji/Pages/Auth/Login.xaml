@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ngaji.Pages.Auth.Login"
+             Title="Login">
+
+    <ScrollView
+                Grid.Row="1"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                HorizontalScrollBarVisibility="Never"
+                VerticalScrollBarVisibility="Never">
+        <VerticalStackLayout
+        Spacing="12">
+
+            <Image
+                    Margin="0,48,0,0"
+                    Source="title.png"
+                    SemanticProperties.Description="Ngaji lagi!"
+                    WidthRequest="250"
+                    HeightRequest="110"
+                    Aspect="AspectFit"
+                    HorizontalOptions="Center" />
+
+            <Label
+                    Text="“Bacalah Al Qur’an, karena ia akan datang pada hari kiamat sebagai syafa’at bagi shahibul Qur’an”"
+                    SemanticProperties.HeadingLevel="Level2"
+                    WidthRequest="350"
+                    FontFamily="Nunito"
+                    FontAttributes="Bold" 
+                    HorizontalTextAlignment="Center"
+                    FontSize="18"
+                    Margin="0,0,0,48"
+                    HorizontalOptions="Center" />
+
+            <Frame
+                    BorderColor="Black"
+                    CornerRadius="22"
+                    Padding="0"
+                    WidthRequest="320"
+                    IsClippedToBounds="True"
+                    HasShadow="True" >
+                <Entry
+                    x:Name="entry"
+                    Placeholder="email..."
+                    FontSize="16"
+                    FontFamily="Nunito"
+                    WidthRequest="320"
+                    HeightRequest="44"
+                    VerticalOptions="Center"
+                    VerticalTextAlignment="Center"
+                    HorizontalOptions="Fill"/>
+            </Frame>
+            <Frame
+                    BorderColor="Black"
+                    CornerRadius="22"
+                    Padding="0"
+                    WidthRequest="320"
+                    IsClippedToBounds="True"
+                    HasShadow="True" >
+                <Entry 
+                       Placeholder="Password..."
+                       FontSize="16"
+                       FontFamily="Nunito"
+                       IsPassword="True" 
+                       WidthRequest="320"
+                       HeightRequest="44"
+                       VerticalOptions="Center"
+                       VerticalTextAlignment="Center"
+                       HorizontalOptions="Fill"/>
+            </Frame>
+
+            <Button Text="Masuk"
+                    class="Rounded"
+                    CornerRadius="32"
+                    FontFamily="Nunito"
+                    Margin="0,32,0,0"
+                    BorderColor="Transparent"
+                    BackgroundColor="{StaticResource Primary}"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    WidthRequest="320"
+                    HeightRequest="56"
+                    Clicked="GotoMainPage"/>
+
+            <Button
+                    Text="Lupa Password"
+                    SemanticProperties.HeadingLevel="Level5"
+                    BackgroundColor="Transparent"
+                    BorderColor="Transparent"
+                    TextColor="Black"
+                    WidthRequest="350"
+                    FontFamily="Nunito"
+                    FontAttributes="Bold"
+                    FontSize="18"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Clicked="GotoLupaPassword"/>
+
+            <Button Text="Daftar Sekarang"
+                    class="Rounded"
+                    CornerRadius="32"
+                    Margin="0,0,0,32"
+                    FontSize="20"
+                    FontFamily="Nunito"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    BorderColor="Transparent"
+                    BackgroundColor="#FFD53F"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    WidthRequest="320"
+                    HeightRequest="56"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
