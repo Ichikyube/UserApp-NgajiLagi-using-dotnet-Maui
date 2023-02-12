@@ -1,9 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Ngaji.MainPage">
-
-    <ScrollView>
+             x:Class="Ngaji.Pages.LandingPage"
+             Title="LandingPage">
+    <ScrollView Scrolled="OnScrollViewLogin">
         <VerticalStackLayout
             Spacing="25">
             <Grid >
@@ -51,6 +51,7 @@
                             HeightRequest="40"/>
                 </HorizontalStackLayout>
             </Grid>
+            
             <Frame
                 BorderColor="Black"
                 BackgroundColor="Transparent"
@@ -75,31 +76,32 @@
                        HorizontalOptions="CenterAndExpand"
                        />
             </Frame>
-            <Label  Text="Ustadz Di Sekitarmu"
-                    SemanticProperties.HeadingLevel="Level1"
-                    FontFamily="Nunito-black"
+            <Label Text="Ustadz Di Sekitarmu" FontFamily="Nunito-black"
                     FontSize="28"
-                    LineHeight="28"
-                    HorizontalOptions="Center"  />
+                    HorizontalOptions="Center" 
+                   />
             <Border Stroke="#F2F2F2"
                     StrokeThickness="2"
                     StrokeShape="RoundRectangle 16"
-                    Padding="11"
+                    Margin="18"
                     WidthRequest="319"
                     HeightRequest="97"
                     VerticalOptions="Center"
                     HorizontalOptions="Center">
-                <FlexLayout JustifyContent="SpaceAround" Padding="12">
+                <HorizontalStackLayout VerticalOptions="Center" Padding="12"  Spacing="12"
+                    HeightRequest="97">
                     <Frame CornerRadius="12"
                            BorderColor="Black"
                            BackgroundColor="Transparent"
-                           Padding="0" 
+                           Padding="0" VerticalOptions="Center"
+                    HorizontalOptions="Center"
                            WidthRequest="71"
                            HeightRequest="71" >
                         <Image Source="avatar.png" WidthRequest="71"
                            HeightRequest="71" Aspect="AspectFill"  />
                     </Frame>
-                    <VerticalStackLayout Spacing="8">
+                    <VerticalStackLayout Spacing="8" VerticalOptions="Center"
+                    HorizontalOptions="Center">
                         <Label Text="Cheyenne Lewwvin" />
                         <Label Text="NgajiLagi Official"
                                FontFamily="Nunito"
@@ -118,9 +120,8 @@
                             </HorizontalStackLayout>
                         </HorizontalStackLayout>
                     </VerticalStackLayout>
-                </FlexLayout>
+                </HorizontalStackLayout>
             </Border>
         </VerticalStackLayout>
     </ScrollView>
-
 </ContentPage>

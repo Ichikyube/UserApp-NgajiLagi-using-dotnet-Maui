@@ -42,6 +42,8 @@
     <MauiImage Update="Resources\Images\title.svg" BaseSize="300,250" />
     <MauiImage Update="Resources\Images\arrow.svg" BaseSize="14.67,8.26" />
     <MauiImage Update="Resources\Images\search.svg" BaseSize="19,19" />
+    <MauiImage Update="Resources\Images\star.svg" BaseSize="13.3,12.67" />
+    <MauiImage Update="Resources\Images\loc.svg" BaseSize="10.5,15" />
     <MauiImage Update="Resources\Images\logo.svg" BaseSize="34,24" />
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />
@@ -60,6 +62,9 @@
     <Compile Update="Pages\Auth\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Pages\LandingPage.xaml.cs">
+      <DependentUpon>LandingPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -70,6 +75,9 @@
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
     <MauiXaml Update="Pages\Auth\Register.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Pages\LandingPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
   </ItemGroup>

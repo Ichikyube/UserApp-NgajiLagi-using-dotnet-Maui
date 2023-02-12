@@ -13,7 +13,14 @@ public static class MauiProgram
                 fonts.AddFont("Nunito-VariableFont_wght.ttf", "Nunito");
                 fonts.AddFont("Nunito-Black.ttf", "Nunito-black");
             });
-
-		return builder.Build();
+        Microsoft.Maui.Handlers.EntryHandler.Mapper.AppendToMapping("CleanEntry", (handler, view) =>
+        {
+            #if WINDOWS
+                handler.PlatformView.BorderThickness = new Microsoft.UI.Xaml.Thickness(0);
+            #elif IOSZ
+                handler.PlatformView.BorderStyle = UIKit.UITextBorderStyle.None;
+            #endif
+        });
+        return builder.Build();
 	}
 }

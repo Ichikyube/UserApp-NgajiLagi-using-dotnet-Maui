@@ -41,16 +41,16 @@
                     HeightRequest="44"
                     IsClippedToBounds="True"
                     HasShadow="True" >
-                <Entry
-                    Placeholder="email..."
-                    FontSize="16"
-                    FontFamily="Nunito"
-                    WidthRequest="320"
-                    HeightRequest="44"
-                    VerticalOptions="Center"
-                    VerticalTextAlignment="Center"
-                    HorizontalTextAlignment="Start"
-                    HorizontalOptions="Start"/>
+                <Entry  x:Name="email"
+                        Placeholder="email..."
+                        FontSize="16"
+                        FontFamily="Nunito"
+                        WidthRequest="320"
+                        HeightRequest="44"
+                        VerticalOptions="Center"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Start"
+                        HorizontalOptions="Start"/>
             </Frame>
             <Frame
                     BorderColor="Black"
@@ -60,7 +60,7 @@
                     HeightRequest="44"
                     IsClippedToBounds="True"
                     HasShadow="True" >
-                <Entry 
+                <Entry x:Name="password"
                        Placeholder="Password..."
                        FontSize="16"
                        FontFamily="Nunito"
