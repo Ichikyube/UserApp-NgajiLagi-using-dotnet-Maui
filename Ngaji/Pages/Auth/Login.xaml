@@ -42,7 +42,6 @@
                     IsClippedToBounds="True"
                     HasShadow="True" >
                 <Entry
-                    x:Name="entry"
                     Placeholder="email..."
                     FontSize="16"
                     FontFamily="Nunito"
@@ -50,7 +49,8 @@
                     HeightRequest="44"
                     VerticalOptions="Center"
                     VerticalTextAlignment="Center"
-                    HorizontalOptions="Fill"/>
+                    HorizontalTextAlignment="Start"
+                    HorizontalOptions="Start"/>
             </Frame>
             <Frame
                     BorderColor="Black"
@@ -69,7 +69,8 @@
                        HeightRequest="44"
                        VerticalOptions="Center"
                        VerticalTextAlignment="Center"
-                       HorizontalOptions="Fill"/>
+                       HorizontalTextAlignment="Start"
+                       HorizontalOptions="Start"/>
             </Frame>
 
             <Button Text="Masuk"

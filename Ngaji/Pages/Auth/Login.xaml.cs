@@ -13,7 +13,7 @@ public partial class Login : ContentPage
         await Navigation.PushAsync(new LupaPassword());
     }
 
-    private async void GotoMainPage(object sender, EventArgs e)
+    private void GotoMainPage(object sender, EventArgs e)
     {
         Application.Current.MainPage = new NavigationPage(new MainPage());
     }
