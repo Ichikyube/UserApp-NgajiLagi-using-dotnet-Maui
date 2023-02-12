@@ -9,10 +9,9 @@ public static class MauiProgram
 			.UseMauiApp<App>()
 			.ConfigureFonts(fonts =>
 			{
-				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 fonts.AddFont("Nunito-Italic-VariableFont_wght.ttf", "NunitoItalic");
                 fonts.AddFont("Nunito-VariableFont_wght.ttf", "Nunito");
+                fonts.AddFont("Nunito-Black.ttf", "Nunito-black");
             });
 
 		return builder.Build();
