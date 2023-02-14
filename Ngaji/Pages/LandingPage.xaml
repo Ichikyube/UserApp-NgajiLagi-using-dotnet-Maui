@@ -342,17 +342,14 @@
                     </VerticalStackLayout>
                 </HorizontalStackLayout>
             </Border>
-            <Frame
-                BorderColor="{StaticResource Primary}"
-                BackgroundColor="Transparent"
-                CornerRadius="16"
-                Padding="0"
-                WidthRequest="280"
-                Scale="1.4"
-                HeightRequest="32"
-                IsClippedToBounds="True"
-                HorizontalOptions="Center"
-                VerticalOptions="Center" >
+            <Border  Stroke="{StaticResource Primary}"
+                    StrokeThickness="2"
+                    StrokeShape="RoundRectangle 32"
+                    Padding="0"
+                    WidthRequest="319"
+                    HeightRequest="44"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center" >
                 <Label Text="Lihat Semua Artikel" 
                        FontFamily="Nunito-black"
                        TextColor="{StaticResource Primary}"
@@ -361,7 +358,7 @@
                        HorizontalOptions="Center" 
                        VerticalOptions="Center"
                     />
-            </Frame>
+            </Border>
             
         </VerticalStackLayout>
     </ScrollView>
