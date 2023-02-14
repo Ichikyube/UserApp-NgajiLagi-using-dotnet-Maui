@@ -7,9 +7,8 @@ public partial class LandingPage : ContentPage
 		InitializeComponent();
 	}
 
-    private void OnScrollViewLogin(object sender, ScrolledEventArgs e)
+    private async void GotoLogin(object sender, EventArgs e)
     {
-        ScrollView Scroll = new ScrollView();
-        Scroll.Scrolled += OnScrollViewLogin;
+        await Navigation.PushAsync(new Auth.Login());
     }
 }
