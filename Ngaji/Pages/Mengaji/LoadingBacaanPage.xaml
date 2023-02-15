@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Shell.NavBarIsVisible="False"
+    BackgroundColor="White"
+    x:Class="ngajilagi.Views.Mengaji.LoadingBacaanPage">
+
+    <FlexLayout Direction="Column" AlignContent="Center" JustifyContent="Center">
+        <VerticalStackLayout HorizontalOptions="Center" Spacing="44">
+            <Image 
+                Source="loadingbacaan.svg"
+                WidthRequest="213"
+                HeightRequest="213"
+            />
+            <Label Text="Membuka Bacaanmu" TextColor="#313131" FontFamily="NunitoBold" FontAttributes="Bold" FontSize="24" HorizontalOptions="Center" />
+        </VerticalStackLayout>
+    </FlexLayout>
+
+</ContentPage>

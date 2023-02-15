@@ -2,23 +2,19 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Ngaji.Pages.LandingPage"
-             Shell.NavBarIsVisible="false"
-             Title="Home">
-    
-    <ScrollView>
-        <VerticalStackLayout Padding="28"
-        Spacing="25">
-            <Grid>
-                <FlexLayout JustifyContent="SpaceAround" BackgroundColor="Transparent">
-                    <Image
+             Shell.NavBarIsVisible="True" 
+             BackgroundColor="{DynamicResource SecondaryColor}">
+    <Shell.TitleView>
+        <FlexLayout JustifyContent="SpaceAround">
+            <Image
                     Source="logo.png"
                     HeightRequest="24"
                     WidthRequest="34"
                     Margin="16,12,16,12"
                     Aspect="AspectFit"
                     HorizontalOptions="Start"/>
-                    <HorizontalStackLayout >
-                        <Button Text="Masuk"
+            <HorizontalStackLayout >
+                <Button Text="Masuk"
                             class="Rounded"
                             CornerRadius="32"
                             Padding="16,12,16,12"
@@ -33,11 +29,11 @@
                             HeightRequest="40"
                             Clicked="GotoLogin"/>
 
-                        <Button Text="Daftar"
+                <Button Text="Daftar"
                             class="Rounded"
                             CornerRadius="16"
                             Padding="16,12,16,12"
-                            FontSize="16"
+                            FontSize="12"
                             FontFamily="Nunito-black"
                             TextColor="White"
                             BorderColor="Transparent"
@@ -46,9 +42,12 @@
                             VerticalOptions="Center"
                             WidthRequest="82"
                             HeightRequest="40"/>
-                    </HorizontalStackLayout>
-                </FlexLayout>
-            </Grid>
+            </HorizontalStackLayout>
+        </FlexLayout>
+    </Shell.TitleView>
+    <ScrollView>
+        <VerticalStackLayout Padding="28"
+        Spacing="25">
             <Frame
                 BorderColor="Black"
                 BackgroundColor="Transparent"
@@ -361,5 +360,7 @@
             </Border>
             
         </VerticalStackLayout>
+        
     </ScrollView>
+    
 </ContentPage>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Shell.NavBarIsVisible="False"
+             x:Class="ngajilagi.Views.Mengaji.SesiMengajiPage">
+
+    <FlexLayout Direction="Column">
+
+        <!-- Header -->
+
+        <!-- Body -->
+        <FlexLayout FlexLayout.Grow="1">
+
+            <!-- Content -->
+            <ScrollView Padding="28,0,28,0">
+                <VerticalStackLayout>
+
+                    <HorizontalStackLayout Margin="0,28,0,28" Spacing="56" VerticalOptions="Center">
+                        <Label Text="Sesi Mengaji" FontAttributes="Bold" FontFamily="NunitoBold" FontSize="28" />
+                        <Frame Padding="10" CornerRadius="22" BackgroundColor="#F2F2F2">
+                            <HorizontalStackLayout VerticalOptions="Center" Spacing="8">
+                                <Image Source="time.svg"
+                                WidthRequest="15" HeightRequest="15" />
+                                <Label Text="Riwayat" FontFamily="NunitoBold" FontSize="14" Margin="0,-2,0,0" />
+                            </HorizontalStackLayout>
+                        </Frame>
+                    </HorizontalStackLayout>
+
+                    <VerticalStackLayout Margin="0,0,0,24">
+                        <Label Text="Hari Ini" FontAttributes="Bold" FontFamily="NunitoBold" FontSize="24" />
+
+                        <Frame Margin="0,12,0,0" Padding="12" CornerRadius="12" BackgroundColor="#88984A">
+                            <VerticalStackLayout Spacing="12">
+                                <HorizontalStackLayout Spacing="12">
+                                    <Image Source="user1.png" WidthRequest="74" HeightRequest="103" />
+                                    <VerticalStackLayout Spacing="8" VerticalOptions="Center">
+                                        <Label Text="Dalene Robertson" FontFamily="NunitoBold" FontAttributes="Bold" FontSize="18" TextColor="#fff" />
+                                        <Label Text="QS. Al Baqarah:45" FontFamily="NunitoRegular" FontAttributes="Bold" FontSize="13" TextColor="#fff" />
+                                        <HorizontalStackLayout Spacing="4">
+                                            <Image Source="timewhite.svg" />
+                                            <Label Text="08:00 - 09:00" FontFamily="NunitoBold" FontSize="13" TextColor="#fff" />
+                                        </HorizontalStackLayout>
+                                    </VerticalStackLayout>
+                                </HorizontalStackLayout>
+                                <Button Text="Mulai Mengaji" BackgroundColor="#F4DD8F" CornerRadius="12" FontSize="14" FontFamily="NunitoBold" TextColor="#313131" />
+                            </VerticalStackLayout>
+                        </Frame>
+
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout Margin="0,24,0,0">
+                        <Label Text="Yang akan datang" FontSize="24" FontFamily="NunitoBold" />
+                        
+                        <HorizontalStackLayout Padding="0,24,0,16" Spacing="12">
+                                
+                            <Image Source="user2.png" WidthRequest="54" HeightRequest="54" />
+
+                            <VerticalStackLayout Spacing="4" VerticalOptions="Center">
+                                    <Label Text="Dalene Robertson" 
+                                        FontFamily="NunitoBold"
+                                        FontSize="20"
+                                    />
+                                    <Label Text="Sabtu, 3 Apr 2021  •  13:00 PM " 
+                                        FontFamily="NunitoRegular"
+                                        FontSize="13"
+                                        TextColor="#88984A"
+                                    />
+                            </VerticalStackLayout>
+
+                        </HorizontalStackLayout>
+                        
+                        <Line Stroke="#F2F2F2"
+                        X2="350" />
+
+                        <HorizontalStackLayout Padding="0,16,0,16" Spacing="12">
+                                
+                            <Image Source="user2.png" WidthRequest="54" HeightRequest="54" />
+
+                            <VerticalStackLayout Spacing="4" VerticalOptions="Center">
+                                    <Label Text="Dalene Robertson" 
+                                        FontFamily="NunitoBold"
+                                        FontSize="20"
+                                    />
+                                    <Label Text="Sabtu, 3 Apr 2021  •  13:00 PM " 
+                                        FontFamily="NunitoRegular"
+                                        FontSize="13"
+                                        TextColor="#88984A"
+                                    />
+                            </VerticalStackLayout>
+
+                        </HorizontalStackLayout>
+                        
+                        <Line Stroke="#F2F2F2"
+                        X2="350" />
+                    </VerticalStackLayout>
+                
+                </VerticalStackLayout>
+            </ScrollView>
+
+        </FlexLayout>
+
+        <!-- Footer -->
+        <VerticalStackLayout VerticalOptions="End">
+            <Border StrokeThickness="1"
+                    Stroke="#88984A"
+                    StrokeShape="RoundRectangle 24,24,0,0"
+                    Background="#FFF"
+                    Padding="43,20,43,9"
+                    HorizontalOptions="FillAndExpand">
+                <VerticalStackLayout Spacing="42">
+                    <HorizontalStackLayout Spacing="32">
+                        <HorizontalStackLayout Spacing="12">
+                            <Image Source="homeroot.svg" WidthRequest="19" HeightRequest="19" />
+                            <Label Text="Home" FontFamily="NunitoBold" FontAttributes="Bold" FontSize="18" TextColor="#F0B70D" />
+                        </HorizontalStackLayout>
+                        <ImageButton Source="result2.svg" WidthRequest="19" HeightRequest="19" />
+                        <ImageButton Source="notification.svg" WidthRequest="19" HeightRequest="19" />
+                        <ImageButton Source="book.svg" WidthRequest="19" HeightRequest="19" />
+                        <ImageButton Source="settings.svg" WidthRequest="19" HeightRequest="19" />
+                    </HorizontalStackLayout>
+                    <VerticalStackLayout HorizontalOptions="Center">
+                        <Image Source="homeindicator.svg" />
+                    </VerticalStackLayout>
+                </VerticalStackLayout>    
+            </Border>
+        </VerticalStackLayout>
+    </FlexLayout>
+
+</ContentPage>

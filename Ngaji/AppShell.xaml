@@ -7,14 +7,37 @@
     xmlns:pages="clr-namespace:Ngaji.Pages"
     xmlns:auth="clr-namespace:Ngaji.Pages.Auth"
     Shell.FlyoutBehavior="Disabled">
-
+    
+    <TabBar>
+        <Tab Title="Home" Icon="home.png">
+            <ShellContent
+                ContentTemplate="{DataTemplate pages:LandingPage}"
+                Route="LandingPage" >
+            </ShellContent>
+        </Tab>
+        <Tab Title="Read"
+            Icon="bacaan.png">
+            <ShellContent ContentTemplate="{DataTemplate pages:ReadPage}" />
+        </Tab>
+        <Tab Title="Inbox"
+            Icon="chat.png">
+            <ShellContent ContentTemplate="{DataTemplate pages:InboxPage}" />
+        </Tab>
+        <Tab Title="Notification"
+            Icon="bell.png">
+            <ShellContent ContentTemplate="{DataTemplate pages:NotifPage}" />
+        </Tab>
+        <Tab Title="Profile"
+            Icon="profile.png">
+            <ShellContent ContentTemplate="{DataTemplate pages:ProfilePage}" />
+        </Tab>
+    </TabBar>
     <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate pages:LandingPage}"
-        Route="LandingPage" />
+                Title="Login"
+                ContentTemplate="{DataTemplate auth:Login}"
+                Route="LoginPage" />
     <ShellContent
-        Title="Login"
-        ContentTemplate="{DataTemplate auth:Login}"
-        Route="LoginPage" />
-
+                Title="Register"
+                ContentTemplate="{DataTemplate auth:Register}"
+                Route="RegisterPage" />
 </Shell>

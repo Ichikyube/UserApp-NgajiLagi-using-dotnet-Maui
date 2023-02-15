@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ngajilagi.Views.Mengaji.DetailPage">
+
+    <ScrollView Padding="28,0,28,0">
+        <VerticalStackLayout>
+
+                <HorizontalStackLayout Margin="0,28,0,28" 
+                        Spacing="24" VerticalOptions="Center">
+
+                    <Label Text="Detail Mengaji" 
+                            FontSize="28"
+                            FontAttributes="Bold"
+                            FontFamily="Nunito"
+                            HorizontalOptions="Center"
+                        />
+
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout VerticalOptions="Center" Padding="0,0,0,28">
+                    <Image Source="user.png" WidthRequest="70" HeightRequest="70" />
+
+                    <VerticalStackLayout Spacing="4" Margin="12,5,0,0">
+                        <Label Text="Ustadz Fulan Fulana" Margin="0" Padding="0" FontAttributes="Bold" FontFamily="NunitoBold" FontSize="18" />
+                        <Label Text="Official Ngajilagi" Margin="0" Padding="0" FontFamily="NunitoRegular" TextColor="#88984A" FontSize="18" />
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+
+                <Frame BorderColor="#F2F2F2" CornerRadius="20">
+                    <Label Text="Mulai dari Awal" FontFamily="NunitoBold" FontAttributes="Bold" FontSize="16" />
+                </Frame>
+
+                <StackLayout Margin="0,21,0,14">
+                    <Frame BorderColor="#F2F2F2" CornerRadius="20">
+                        <VerticalStackLayout>
+
+                            <HorizontalStackLayout Padding="0,0,0,21" Spacing="12">
+                                <Image Source="date.svg" WidthRequest="15" HeightRequest="15" />
+                                <Label Text="Jadwal Mengaji" FontFamily="NunitoBold" FontAttributes="Bold" FontSize="14" />
+                            </HorizontalStackLayout>
+                            <Line Stroke="#F2F2F2"
+                            X2="300" />
+                            
+                            <VerticalStackLayout Margin="0,10,0,10" Spacing="3">
+                                <Label Text="Tanggal" Margin="0" Padding="0" TextColor="#7A7585" FontFamily="NunitoRegular" FontSize="14" />
+                                <Label Text="Rabu, 7 April 2021" Margin="0" Padding="0" TextColor="#7A7585" FontFamily="NunitoBold" FontSize="16" />
+                            </VerticalStackLayout>
+
+                            <VerticalStackLayout Margin="0,10,0,10" Spacing="3">
+                                <Label Text="Waktu" Margin="0" Padding="0" TextColor="#7A7585" FontFamily="NunitoRegular" FontSize="14" />
+                                <Label Text="20.00 WIB" Margin="0" Padding="0" TextColor="#7A7585" FontFamily="NunitoBold" FontSize="15" />
+                            </VerticalStackLayout>
+
+                            <VerticalStackLayout Margin="0,10,0,10" Spacing="3">
+                                <Label Text="Durasi" Margin="0" Padding="0" TextColor="#7A7585" FontFamily="NunitoRegular" FontSize="14" />
+                                <Label Text="15 Menit" Margin="0" Padding="0" TextColor="#7A7585" FontFamily="NunitoBold" FontSize="16" />
+                            </VerticalStackLayout>
+
+                        </VerticalStackLayout>
+                    </Frame>
+                </StackLayout>
+
+                <StackLayout Margin="0,0,0,66">
+                    <Frame BorderColor="#F2F2F2" CornerRadius="20">
+                        <VerticalStackLayout>
+
+                            <HorizontalStackLayout Padding="0,0,0,21" Spacing="12">
+                                <Image Source="result.svg" WidthRequest="15" HeightRequest="15" />
+                                <Label Text="Hasil Mengaji" FontFamily="NunitoBold" FontAttributes="Bold" FontSize="14" />
+                            </HorizontalStackLayout>
+                            <Line Stroke="#F2F2F2"
+                            X2="300" />
+                            
+                            <VerticalStackLayout Margin="0,10,0,10" Spacing="3">
+                                <Label Text="Tingkatan" Margin="0" Padding="0" TextColor="#7A7585" FontFamily="NunitoRegular" FontSize="14" />
+                                <Label Text="Pemula" Margin="0" Padding="0" TextColor="#7A7585" FontFamily="NunitoBold" FontSize="16" />
+                            </VerticalStackLayout>
+
+                            <StackLayout Margin="0,10,0,10">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition />
+                                        <ColumnDefinition />
+                                    </Grid.ColumnDefinitions>
+                                    <VerticalStackLayout Grid.Column="0">
+                                        <Label Text="Terakhir Dibaca" Margin="0" Padding="0" TextColor="#7A7585" FontFamily="NunitoRegular" FontSize="14" />
+                                        <Label Text="QS. Al-Baqarah:45" Margin="0" Padding="0" TextColor="#7A7585" FontFamily="NunitoBold" FontSize="15" />
+                                    </VerticalStackLayout>
+                                    <Label Grid.Column="1" Text="Lihat Bacaan" Margin="0" Padding="0" TextColor="#2F80ED" FontFamily="NunitoRegular" FontAttributes="Bold" FontSize="12" VerticalOptions="End" HorizontalOptions="Center" />
+                                </Grid>
+                            </StackLayout>
+
+                            <VerticalStackLayout Margin="0,10,0,10" Spacing="3">
+                                <Label Text="Ulasan Lancar" Margin="0" Padding="0" TextColor="#7A7585" FontFamily="NunitoRegular" FontSize="14" />
+                                <Label Text="Sudah Lancar" Margin="0" Padding="0" TextColor="#FB511B" FontFamily="NunitoBold" FontSize="16" />
+                            </VerticalStackLayout>
+
+                        </VerticalStackLayout>
+                    </Frame>
+                </StackLayout>
+
+                <!-- <StackLayout Margin="0,50,0,0" HorizontalOptions="Center" VerticalOptions="End">
+                    <Button 
+                        Text="Kembali"
+                        Padding="123,20,123,20"
+                        BackgroundColor="#FFD53F"
+                        FontAttributes="Bold"
+                        FontFamily="NunitoBold"
+                        FontSize="18"
+                        CornerRadius="23"
+                    />
+                </StackLayout> -->
+        
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

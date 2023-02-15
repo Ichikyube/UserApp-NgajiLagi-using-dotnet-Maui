@@ -35,7 +35,7 @@
 		<MauiIcon Include="Resources\AppIcon\logoicon.svg" Color="#FFFFFF" />
 
 		<!-- Splash Screen -->
-		<MauiSplashScreen Include="Resources\Splash\logosplash.svg" Color="#FFFFFF" BaseSize="90,90" />
+		<MauiSplashScreen Include="Resources\Splash\logosquare.svg" Color="#FFFFFF" BaseSize="128,128" />
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
@@ -45,6 +45,20 @@
     <MauiImage Update="Resources\Images\star.svg" BaseSize="13.3,12.67" />
     <MauiImage Update="Resources\Images\loc.svg" BaseSize="10.5,15" />
     <MauiImage Update="Resources\Images\logo.svg" BaseSize="34,24" />
+    <MauiImage Update="Resources\Images\home.svg" BaseSize="19,19" />
+    <MauiImage Update="Resources\Images\bacaan.svg" BaseSize="22.41,19" />
+    <MauiImage Update="Resources\Images\bell.svg" BaseSize="18.8,21.45" />
+    <MauiImage Update="Resources\Images\chat.svg" BaseSize="19,19" />
+    <MauiImage Update="Resources\Images\profil.svg" BaseSize="18,18" />
+    <MauiImage Update="Resources\Images\calender.svg" />
+    <MauiImage Update="Resources\Images\greenpercent.svg" />
+    <MauiImage Update="Resources\Images\leftarrow.svg" />
+    <MauiImage Update="Resources\Images\logohorizontal.svg" Color="#ffffff" />
+    <MauiImage Update="Resources\Images\percent.svg" />
+    <MauiImage Update="Resources\Images\smallrightarrow.svg" />
+    <MauiImage Update="Resources\Images\time.svg" />
+    <MauiImage Update="Resources\Images\ustadz.svg" />
+    <MauiImage Update="Resources\Images\yellowarrow.svg" />
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />
 
@@ -65,6 +79,18 @@
     <Compile Update="Pages\LandingPage.xaml.cs">
       <DependentUpon>LandingPage.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Pages\InboxPage.xaml.cs">
+      <DependentUpon>InboxPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\ProfilePage.xaml.cs">
+      <DependentUpon>ProfilePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\NotifPage.xaml.cs">
+      <DependentUpon>NotifPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\ReadPage.xaml.cs">
+      <DependentUpon>ReadPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -80,5 +106,21 @@
     <MauiXaml Update="Pages\LandingPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
+    <MauiXaml Update="Pages\ProfilePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Pages\ReadPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Pages\InboxPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Pages\NotifPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Pages\Book\" />
   </ItemGroup>
 </Project>
