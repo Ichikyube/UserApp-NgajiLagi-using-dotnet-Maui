@@ -103,6 +103,12 @@
     <MauiXaml Update="Pages\Auth\Register.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
+    <MauiXaml Update="Pages\Booking\ConfirmBooking.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Pages\Booking\ConfirmDiscount.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
     <MauiXaml Update="Pages\LandingPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
@@ -118,9 +124,5 @@
     <MauiXaml Update="Pages\NotifPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Pages\Book\" />
   </ItemGroup>
 </Project>

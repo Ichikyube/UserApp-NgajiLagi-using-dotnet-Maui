@@ -6,14 +6,17 @@
     xmlns:local="clr-namespace:Ngaji"
     xmlns:pages="clr-namespace:Ngaji.Pages"
     xmlns:auth="clr-namespace:Ngaji.Pages.Auth"
+    xmlns:booking="clr-namespace:Ngaji.Pages.Booking"
     Shell.FlyoutBehavior="Disabled">
+
+    <ShellContent
+                ContentTemplate="{DataTemplate booking:ConfirmDiscount}"
+                Route="LandingPage" >
+    </ShellContent>
     
     <TabBar>
         <Tab Title="Home" Icon="home.png">
-            <ShellContent
-                ContentTemplate="{DataTemplate pages:LandingPage}"
-                Route="LandingPage" >
-            </ShellContent>
+            
         </Tab>
         <Tab Title="Read"
             Icon="bacaan.png">
