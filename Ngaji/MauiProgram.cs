@@ -1,7 +1,5 @@
 ﻿using Microsoft.Maui.Controls.Compatibility.Hosting;
-
 namespace Ngaji;
-
 public static class MauiProgram
 {
 	public static MauiApp CreateMauiApp()
@@ -9,6 +7,7 @@ public static class MauiProgram
 		var builder = MauiApp.CreateBuilder();
         builder
             .UseMauiApp<App>()
+            .UseMauiCompatibility()
             .ConfigureFonts(fonts =>
             {
                 fonts.AddFont("Nunito-Italic-VariableFont_wght.ttf", "NunitoItalic");
@@ -16,14 +15,10 @@ public static class MauiProgram
                 fonts.AddFont("Nunito-Black.ttf", "Nunito-black");
                 fonts.AddFont("Nunito-ExtraBold.ttf", "Nunito-extrabold");
             })
-            //.UseMauiCompatibility()
             .ConfigureMauiHandlers(handlers =>
             {
                 #if ANDROID
-                    handlers.AddHandler(typeof(Shell), typeof(CustomShellRenderer));
-                #endif
-                #if IOS
-                    handlers.AddHandler(typeof(PressableView), typeof(XamarinCustomRenderer.iOS.Renderers.PressableViewRenderer));
+                    handlers.AddHandler(typeof(Shell), typeof(Ngaji.Platforms.Android.Renderers.CustomShellRenderer));
                 #endif
             });
         Microsoft.Maui.Handlers.EntryHandler.Mapper.AppendToMapping("CleanEntry", (handler, view) =>
