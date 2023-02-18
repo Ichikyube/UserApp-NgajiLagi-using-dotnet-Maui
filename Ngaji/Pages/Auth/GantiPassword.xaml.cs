@@ -9,7 +9,8 @@ public partial class GantiPassword : ContentPage
 
     private async void BackImage(object sender, EventArgs e)
     {
-        await Navigation.PushModalAsync(new UserProfile());
+        //await Navigation.PushModalAsync(new UserProfile());
+        await Shell.Current.GoToAsync("userprofile");
     }
 
     void PasswordConfirm_TextChange(object sender, TextChangedEventArgs e)
@@ -17,14 +18,14 @@ public partial class GantiPassword : ContentPage
         if (password.Text == "")
         {
             button.IsEnabled = false;
-            button.BackgroundColor = Color.FromHex("#C0C0C0");
-            button.TextColor = Color.FromHex("#FFFFFF");
+            //button.BackgroundColor = Color.FromHex("#C0C0C0");
+            //button.TextColor = Color.FromHex("#FFFFFF");
         }
         else
         {
             button.IsEnabled = true;
-            button.BackgroundColor = Color.FromHex("#FFD53F");
-            button.TextColor = Color.FromHex("#313131");
+            //button.BackgroundColor = Color.FromHex("#FFD53F");
+            //button.TextColor = Color.FromHex("#313131");
         }
     }
 

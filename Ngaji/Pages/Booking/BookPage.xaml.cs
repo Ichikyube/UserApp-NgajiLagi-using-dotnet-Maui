@@ -1,8 +1,8 @@
 namespace Ngaji.Pages.Booking;
 
-public partial class BookAppointment : ContentPage
+public partial class BookingPage : ContentPage
 {
-    public BookAppointment()
+    public BookingPage()
     {
         InitializeComponent();
     }

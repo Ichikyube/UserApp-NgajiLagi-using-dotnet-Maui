@@ -21,4 +21,9 @@ public partial class Login : ContentPage
         //App.Current.MainPage = LandingPage;
         //await Navigation.PopAsync();
     }
+
+    private async void GotoBooking(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync("book-appointment");
+    }
 }

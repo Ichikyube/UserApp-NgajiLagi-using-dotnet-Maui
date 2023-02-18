@@ -112,7 +112,8 @@
                     BorderColor="Transparent"
                     BackgroundColor="#FFD53F"
                     HorizontalOptions="Center"
-                    VerticalOptions="Center"
+                    VerticalOptions="Center" 
+                    Clicked="GotoBooking"
                     WidthRequest="320"
                     HeightRequest="56"/>
         </VerticalStackLayout>
