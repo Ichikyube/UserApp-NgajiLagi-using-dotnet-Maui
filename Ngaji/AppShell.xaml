@@ -7,9 +7,12 @@
     xmlns:pages="clr-namespace:Ngaji.Pages"
     xmlns:auth="clr-namespace:Ngaji.Pages.Auth"
     xmlns:read="clr-namespace:Ngaji.Pages.Mengaji"
-    xmlns:order="clr-namespace:Ngaji.Pages.Order"
+    xmlns:order="clr-namespace:Ngaji.Pages.Booking"
     Shell.FlyoutBehavior="Disabled">
-    
+    <!--ShellContent
+                ContentTemplate="{DataTemplate order:BookingPage}"
+                Route="LandingPage" >
+    </ShellContent-->
     <TabBar>
         <Tab x:Name="Home" Icon="home.png">
             <ShellContent

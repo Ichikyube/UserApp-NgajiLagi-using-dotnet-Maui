@@ -3,199 +3,190 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Ngaji.Pages.Booking.BookingPage"
              Title="Book Appointment">
-    <ScrollView Orientation="Vertical"
-                VerticalScrollBarVisibility="Default">
-        <VerticalStackLayout
-            Padding="28, 28, 28, 0">
-            <Label 
+
+    <VerticalStackLayout Margin="28">
+        <Label 
                 Text="Tentukan Jadwal Mengajimu"
                 HorizontalOptions="Center" 
                 TextColor="Black"
-                FontSize="24"
-                FontAttributes="Bold"
-                LineHeight="32"/>
+                FontFamily="Nunito-extrabold"
+                FontSize="24"/>
 
-            <FlexLayout JustifyContent="SpaceBetween"
-                        Margin="0, 20, 0, 0">
-                <Label Text="February 2021"
+        <FlexLayout JustifyContent="SpaceBetween">
+            <Label Text="February 2021"
                        FlexLayout.AlignSelf="Start"
                        TextColor="Black"
                        FontSize="18"
                        FontAttributes="Bold"/>
-                <Label Text="lihat kalender"
+            <Label Text="lihat kalender"
                        FlexLayout.AlignSelf="End"
                        TextColor="#2F80ED"
                        FontSize="14"/>
-            </FlexLayout>
-            <ScrollView Orientation="Horizontal" 
-                        HorizontalScrollBarVisibility="Never"
-                        Margin="0, 18, 0, 0">
-                <HorizontalStackLayout HorizontalOptions="Center"
+        </FlexLayout>
+        <HorizontalStackLayout HorizontalOptions="Center"
                                        Spacing="12">
-                    <Border Stroke="#88984A"
+            <Border Stroke="#88984A"
                         Background="#88984A"
                         StrokeThickness="2"
                         Padding="12">
-                        <Border.StrokeShape>
-                            <RoundRectangle CornerRadius="8" />
-                        </Border.StrokeShape>
-                        <VerticalStackLayout>
-                            <Label Text="Sun"
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="8" />
+                </Border.StrokeShape>
+                <VerticalStackLayout>
+                    <Label Text="Sun"
                                HorizontalOptions="Center"
                                TextColor="White"
                                FontSize="12"/>
-                            <Label Text="25"
+                    <Label Text="25"
                                HorizontalOptions="Center"
                                TextColor="White"
                                FontSize="24"/>
-                        </VerticalStackLayout>
-                    </Border>
-                    <Border Stroke="#F2F2F2"
+                </VerticalStackLayout>
+            </Border>
+            <Border Stroke="#F2F2F2"
                         Background="White"
                         StrokeThickness="2"
                         Padding="12">
-                        <Border.StrokeShape>
-                            <RoundRectangle CornerRadius="8" />
-                        </Border.StrokeShape>
-                        <VerticalStackLayout>
-                            <Label Text="Sun"
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="8" />
+                </Border.StrokeShape>
+                <VerticalStackLayout>
+                    <Label Text="Sun"
                                HorizontalOptions="Center"
                                TextColor="Black"
                                FontSize="12"/>
-                            <Label Text="26"
+                    <Label Text="26"
                                HorizontalOptions="Center"
                                TextColor="Black"
                                FontSize="24"/>
-                        </VerticalStackLayout>
-                    </Border>
-                    <Border Stroke="#F2F2F2"
+                </VerticalStackLayout>
+            </Border>
+            <Border Stroke="#F2F2F2"
                         Background="White"
                         StrokeThickness="2"
                         Padding="12">
-                        <Border.StrokeShape>
-                            <RoundRectangle CornerRadius="8" />
-                        </Border.StrokeShape>
-                        <VerticalStackLayout>
-                            <Label Text="Sun"
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="8" />
+                </Border.StrokeShape>
+                <VerticalStackLayout>
+                    <Label Text="Sun"
                                HorizontalOptions="Center"
                                TextColor="#D3D3D3"
                                FontSize="12"/>
-                            <Label Text="27"
+                    <Label Text="27"
                                HorizontalOptions="Center"
                                TextColor="#D3D3D3"
                                FontSize="27"/>
-                        </VerticalStackLayout>
-                    </Border>
-                    <Border Stroke="#F2F2F2"
+                </VerticalStackLayout>
+            </Border>
+            <Border Stroke="#F2F2F2"
                         Background="White"
                         StrokeThickness="2"
                         Padding="12">
-                        <Border.StrokeShape>
-                            <RoundRectangle CornerRadius="8" />
-                        </Border.StrokeShape>
-                        <VerticalStackLayout>
-                            <Label Text="Sun"
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="8" />
+                </Border.StrokeShape>
+                <VerticalStackLayout>
+                    <Label Text="Sun"
                                HorizontalOptions="Center"
                                TextColor="Black"
                                FontSize="12"/>
-                            <Label Text="28"
+                    <Label Text="28"
                                HorizontalOptions="Center"
                                TextColor="Black"
                                FontSize="27"/>
-                        </VerticalStackLayout>
-                    </Border>
-                    <Border Stroke="#F2F2F2"
+                </VerticalStackLayout>
+            </Border>
+            <Border Stroke="#F2F2F2"
                         Background="White"
                         StrokeThickness="2"
                         Padding="12">
-                        <Border.StrokeShape>
-                            <RoundRectangle CornerRadius="8" />
-                        </Border.StrokeShape>
-                        <VerticalStackLayout>
-                            <Label Text="Sun"
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="8" />
+                </Border.StrokeShape>
+                <VerticalStackLayout>
+                    <Label Text="Sun"
                                HorizontalOptions="Center"
                                TextColor="Black"
                                FontSize="12"/>
-                            <Label Text="29"
+                    <Label Text="29"
                                HorizontalOptions="Center"
                                TextColor="Black"
                                FontSize="27"/>
-                        </VerticalStackLayout>
-                    </Border>
-                    <Border Stroke="#F2F2F2"
+                </VerticalStackLayout>
+            </Border>
+            <Border Stroke="#F2F2F2"
                     Background="White"
                     StrokeThickness="2"
                     Padding="12">
-                        <Border.StrokeShape>
-                            <RoundRectangle CornerRadius="8" />
-                        </Border.StrokeShape>
-                        <VerticalStackLayout>
-                            <Label Text="Sun"
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="8" />
+                </Border.StrokeShape>
+                <VerticalStackLayout>
+                    <Label Text="Sun"
                             HorizontalOptions="Center"
                             TextColor="Black"
                             FontSize="12"/>
-                            <Label Text="30"
+                    <Label Text="30"
                             HorizontalOptions="Center"
                             TextColor="Black"
                             FontSize="27"/>
-                        </VerticalStackLayout>
-                    </Border>
-                    <Border Stroke="#F2F2F2"
+                </VerticalStackLayout>
+            </Border>
+            <Border Stroke="#F2F2F2"
                     Background="White"
                     StrokeThickness="2"
                     Padding="12">
-                        <Border.StrokeShape>
-                            <RoundRectangle CornerRadius="8" />
-                        </Border.StrokeShape>
-                        <VerticalStackLayout>
-                            <Label Text="Sun"
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="8" />
+                </Border.StrokeShape>
+                <VerticalStackLayout>
+                    <Label Text="Sun"
                             HorizontalOptions="Center"
                             TextColor="Black"
                             FontSize="12"/>
-                            <Label Text="31"
+                    <Label Text="31"
                             HorizontalOptions="Center"
                             TextColor="Black"
                             FontSize="27"/>
-                        </VerticalStackLayout>
-                    </Border>
-                </HorizontalStackLayout>
-            </ScrollView>
-            <HorizontalStackLayout Margin="0, 18, 0, 20">
-                <Ellipse Fill="#313131"
+                </VerticalStackLayout>
+            </Border>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout Padding="0" HeightRequest="18">
+            <Ellipse Fill="#313131"
                          WidthRequest="10"
                          HeightRequest="10"
-                         HorizontalOptions="Start" 
                          Margin="0, 0, 8, 0"/>
-                <Label Text="Tersedia"
+            <Label Text="Tersedia"
                        TextColor="Black"
                        FontSize="13"
                        LineHeight="18"
                        Margin="0, 0, 20, 0"/>
-                <Ellipse Fill="#88984A"
+            <Ellipse Fill="#88984A"
                          WidthRequest="10"
                          HeightRequest="10"
-                         HorizontalOptions="Start" 
                          Margin="0, 0, 8, 0"/>
-                <Label Text="Dipilih"
+            <Label Text="Dipilih"
                        TextColor="Black"
                        FontSize="13"
                        LineHeight="18"
                        Margin="0, 0, 20, 0"/>
-            </HorizontalStackLayout>
-            <Line X1="400"
+        </HorizontalStackLayout>
+
+        <Line X1="400"
                   Y1="0"
                   X2="0"
                   Y2="0"
-                  Stroke="#D3D3D3"/>
-            <Label Text="Pilih waktu mengajimu"
+                  Stroke="#D3D3D3"
+                  HorizontalOptions="Center" />
+
+        <Label Text="Pilih Waktu Mengajimu"
                    Margin="0, 20, 0, 0"
                    TextColor="#313131"
+                   FontFamily="Nunito-extrabold"
                    FontSize="18"
-                   FontAttributes="Bold"/>
-
-            <HorizontalStackLayout>
-
-            </HorizontalStackLayout>
-        </VerticalStackLayout>
-    </ScrollView>
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Start"
+                   HorizontalOptions="Start" />
+    </VerticalStackLayout>
 </ContentPage>

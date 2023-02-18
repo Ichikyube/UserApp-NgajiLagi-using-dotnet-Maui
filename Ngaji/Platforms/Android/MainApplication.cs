@@ -1,6 +1,7 @@
 ﻿using Android.App;
 using Android.Runtime;
 using Microsoft.Maui.Controls.Compatibility.Platform.Android;
+using static Android.Icu.Text.CaseMap;
 
 namespace Ngaji;
 
@@ -19,8 +20,12 @@ public class MainApplication : MauiApplication
             //Remove underline: 
             h.PlatformView.BackgroundTintList = Android.Content.Res.ColorStateList.ValueOf(Colors.Transparent.ToAndroid()); 
         });
+        //Microsoft.Maui.Handlers.TabbedViewHandler.Mapper.AppendToMapping("MyCustomMargin", (h, v) =>
+        //{
+        //    h.PlatformView.
+        //});
         return MauiProgram.CreateMauiApp();
-
+        
     }
     
 }
