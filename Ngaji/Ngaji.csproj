@@ -59,6 +59,11 @@
     <MauiImage Update="Resources\Images\time.svg" />
     <MauiImage Update="Resources\Images\ustadz.svg" />
     <MauiImage Update="Resources\Images\yellowarrow.svg" />
+    <MauiImage Update="Resources\Images\back.svg" />
+	  <MauiImage Update="Resources\Images\jaket.jpg" />
+	  <MauiImage Update="Resources\Images\Logo.svg" />
+	  <MauiImage Update="Resources\Images\pen.svg" />
+	  <MauiImage Update="Resources\Images\prev.svg" />
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />
 
@@ -70,11 +75,23 @@
     <Compile Update="Pages\Auth\LupaPassword.xaml.cs">
       <DependentUpon>LupaPassword.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Pages\Auth\GantiPassword.xaml.cs">
+      <DependentUpon>GantiPassword.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Pages\Auth\Register.xaml.cs">
       <DependentUpon>Register.xaml</DependentUpon>
     </Compile>
     <Compile Update="Pages\Auth\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\Mengaji\RiwayatMengaji.xaml.cs">
+      <DependentUpon>RiwayatMengaji.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\Booking\ConfirmPage.xaml.cs">
+      <DependentUpon>ConfirmPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\Booking\DiscountPage.xaml.cs">
+      <DependentUpon>DiscountPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Pages\LandingPage.xaml.cs">
       <DependentUpon>LandingPage.xaml</DependentUpon>
@@ -82,11 +99,20 @@
     <Compile Update="Pages\InboxPage.xaml.cs">
       <DependentUpon>InboxPage.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Pages\Booking\BookPage.xaml.cs">
+      <DependentUpon>BookPage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Pages\ProfilePage.xaml.cs">
       <DependentUpon>ProfilePage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Pages\NotifPage.xaml.cs">
       <DependentUpon>NotifPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\Profile\EditProfile.xaml.cs">
+      <DependentUpon>EditProfile.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\Profile\ProfilePage.xaml.cs">
+      <DependentUpon>ProfilePage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Pages\ReadPage.xaml.cs">
       <DependentUpon>ReadPage.xaml</DependentUpon>
@@ -100,13 +126,28 @@
     <MauiXaml Update="Pages\Auth\LupaPassword.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
+    <MauiXaml Update="Pages\Auth\GantiPassword.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
     <MauiXaml Update="Pages\Auth\Register.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
     <MauiXaml Update="Pages\LandingPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
+    <MauiXaml Update="Pages\Mengaji\RiwayatMengaji.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Pages\Booking\BookPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
     <MauiXaml Update="Pages\ProfilePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Pages\Profile\EditProfile.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Pages\Profile\ProfilePage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
     <MauiXaml Update="Pages\ReadPage.xaml">
@@ -118,9 +159,5 @@
     <MauiXaml Update="Pages\NotifPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Pages\Book\" />
   </ItemGroup>
 </Project>

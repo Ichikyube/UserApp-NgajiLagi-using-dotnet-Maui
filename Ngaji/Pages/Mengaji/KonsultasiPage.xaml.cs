@@ -1,4 +1,4 @@
-namespace ngajilagi.Views.Mengaji;
+namespace Ngaji.Pages.Mengaji;
 
 public partial class KonsultasiPage : ContentPage
 {

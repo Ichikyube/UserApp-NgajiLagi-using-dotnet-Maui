@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ngaji.Pages.Profile.UserProfile"
+             Title="UserProfile"
+             Shell.NavBarIsVisible="False">
+    <ScrollView>
+        <Grid RowDefinitions="200,*">
+            <HorizontalStackLayout Grid.Row="0" Margin="28,27,28,0">
+                <Frame CornerRadius="20"
+                       WidthRequest="123"
+                       BorderColor="Transparent"
+                       HeightRequest="166"
+                       Padding="0"
+                       BackgroundColor="Red">
+                    <Image Source="jaket.jpg" Margin="0"/>
+                </Frame>
+                <VerticalStackLayout Margin="12,43,0,0">
+                    <Label Text="Fulan Fulana"
+                           FontFamily="Nunito"
+                           FontSize="26"
+                           TextColor="#313131"
+                           FontAttributes="Bold"
+                           LineHeight="1.2"/>
+                    <Label Text="fulan@gmail.com"
+                           FontFamily="Nunito"
+                           FontSize="22"
+                           Margin="0,2,0,0"
+                           LineHeight="2.2"
+                           FontAttributes="Bold"
+                           TextColor="#88984A"
+                           />
+                    <Button Text="Edit Profile"
+                            BackgroundColor="#FFD53F"
+                            CornerRadius="15"
+                            WidthRequest="108"
+                            HeightRequest="30"
+                            Clicked="EditProfile"
+                            HorizontalOptions="Start"
+                            Padding="12,6,12,6"
+                            Margin="0,12,0,0"
+                            TextColor="Black"/>
+                </VerticalStackLayout>
+            </HorizontalStackLayout>
+            <VerticalStackLayout Grid.Row="1" Margin="28,43,48,0">
+                <Button Text="Ganti Password"
+                        TextColor="#333333"
+                        BackgroundColor="Transparent"
+                        FontSize="22"
+                        Clicked="GantiPassword"
+                        Padding="0"
+                        HorizontalOptions="StartAndExpand"
+                        FontFamily="Nunito"
+                        FontAttributes="Bold"
+                        />
+                <FlexLayout Margin="0,50,0,0" JustifyContent="SpaceBetween">
+                    <Button Text="Konsultasi"
+                           TextColor="#333333"
+                           FontFamily="Nunito"
+                           FontAttributes="Bold"
+                           Padding="0"
+                           BackgroundColor="Transparent"
+                           FontSize="22"/>
+                    <Frame BorderColor="Transparent"
+                           Padding="0"
+                           WidthRequest="25"
+                           HeightRequest="25"
+                           BackgroundColor="#EB5757"
+                           CornerRadius="20"
+                           >
+                        <Label Text="1" 
+                               TextColor="White"
+                               VerticalOptions="CenterAndExpand"
+                               HorizontalOptions="CenterAndExpand"/>
+                    </Frame>
+                </FlexLayout>
+                <Button Text="Notifikasi"
+                        Margin="0,50,0,0"
+                        TextColor="#333333"
+                        FontFamily="Nunito"
+                        FontAttributes="Bold"
+                        FontSize="22"
+                        Padding="0"
+                        BackgroundColor="Transparent"
+                        HorizontalOptions="StartAndExpand"/>
+                <Button Text="Logout"
+                        Margin="0,72,0,0"
+                        TextColor="#EB5757"
+                        FontFamily="Nunito"
+                        FontAttributes="Bold"
+                        FontSize="22"
+                        Padding="0"
+                        BackgroundColor="Transparent"
+                        HorizontalOptions="StartAndExpand"/>
+            </VerticalStackLayout>
+        </Grid>
+    </ScrollView>

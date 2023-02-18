@@ -6,38 +6,40 @@
     xmlns:local="clr-namespace:Ngaji"
     xmlns:pages="clr-namespace:Ngaji.Pages"
     xmlns:auth="clr-namespace:Ngaji.Pages.Auth"
+    xmlns:read="clr-namespace:Ngaji.Pages.Mengaji"
+    xmlns:order="clr-namespace:Ngaji.Pages.Order"
     Shell.FlyoutBehavior="Disabled">
     
     <TabBar>
-        <Tab Title="Home" Icon="home.png">
+        <Tab x:Name="Home" Icon="home.png">
             <ShellContent
                 ContentTemplate="{DataTemplate pages:LandingPage}"
                 Route="LandingPage" >
             </ShellContent>
         </Tab>
-        <Tab Title="Read"
+        <Tab x:Name="Read"
             Icon="bacaan.png">
             <ShellContent ContentTemplate="{DataTemplate pages:ReadPage}" />
         </Tab>
-        <Tab Title="Inbox"
+        <Tab x:Name="Inbox"
             Icon="chat.png">
             <ShellContent ContentTemplate="{DataTemplate pages:InboxPage}" />
         </Tab>
-        <Tab Title="Notification"
+        <Tab x:Name="Notification"
             Icon="bell.png">
             <ShellContent ContentTemplate="{DataTemplate pages:NotifPage}" />
         </Tab>
-        <Tab Title="Profile"
+        <Tab x:Name="Profile"
             Icon="profile.png">
             <ShellContent ContentTemplate="{DataTemplate pages:ProfilePage}" />
         </Tab>
     </TabBar>
-    <ShellContent
+    <!--ShellContent
                 Title="Login"
                 ContentTemplate="{DataTemplate auth:Login}"
                 Route="LoginPage" />
     <ShellContent
                 Title="Register"
                 ContentTemplate="{DataTemplate auth:Register}"
-                Route="RegisterPage" />
+                Route="RegisterPage" /-->
 </Shell>

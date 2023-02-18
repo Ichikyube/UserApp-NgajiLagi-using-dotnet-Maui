@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ngaji.Pages.Profile..EditProfile"
+             Title="EditProfile"
+             Shell.NavBarIsVisible="False">
+    <ScrollView Scrolled="OnScroll">
+        <Grid RowDefinitions="100,200,*">
+            <HorizontalStackLayout Grid.Row="0" Margin="28,0,28,0" VerticalOptions="Center">
+                <Frame WidthRequest="38"
+                   HeightRequest="38"
+                   Padding="0"
+                   BorderColor="Transparent"
+                   BackgroundColor="#F2F2F2"
+                   CornerRadius="12">
+                    <ImageButton Source="back.svg" 
+                                 WidthRequest="13"
+                                 Clicked="BackImage"/>
+                </Frame>
+                <Label Text="Edit Profile"
+                   Margin="24,0,0,0"
+                   TextColor="#313131"
+                   FontAttributes="Bold"
+                   FontFamily="Nunito"
+                   FontSize="28"
+                   LineHeight="3.8"/>
+            </HorizontalStackLayout>
+            <StackLayout Grid.Row="1">
+                <Frame WidthRequest="153"
+                   HeightRequest="153"
+                   CornerRadius="100"
+                   Padding="0">
+                    <Image Source="jaket" WidthRequest="500"/>
+                </Frame>
+            </StackLayout>
+            <VerticalStackLayout Grid.Row="2" Margin="28,0,28,0">
+                <Label Text="Nama Lengkap"
+                   TextColor="#828282"
+                   FontAttributes="Bold"
+                   FontSize="18"
+                   LineHeight="2.2"
+                   />
+                <Frame CornerRadius="24"
+                   BorderColor="#F2F2F2"
+                   BackgroundColor="Transparent"
+                   Padding="24,6,0,6"
+                   Margin="0,10,0,0">
+                    <Entry Text="Fulan Malana"
+                   HorizontalOptions="FillAndExpand"/>
+                </Frame>
+
+                <Label Text="Alamat Email"
+                   TextColor="#828282"
+                   FontAttributes="Bold"
+                   FontSize="18"
+                   Margin="0,18,0,0"
+                   LineHeight="2.2"
+                   />
+                <Frame CornerRadius="24"
+                   Padding="24,6,0,6"
+                   BorderColor="#F2F2F2"
+                   Margin="0,10,0,0">
+                    <Entry Text="fulan@gmail.com"
+                       HorizontalOptions="FillAndExpand"/>
+                </Frame>
+
+                <Label Text="Tempat Lahir"
+                   TextColor="#828282"
+                   FontAttributes="Bold"
+                   FontSize="18"
+                   Margin="0,18,0,0"
+                   LineHeight="2.2"
+                   />
+                <Frame CornerRadius="24"
+                   Padding="24,6,0,6"
+                   BorderColor="#F2F2F2"
+                   Margin="0,10,0,0">
+                    <Entry Placeholder="Belum Diisi"
+                       HorizontalOptions="FillAndExpand"/>
+                </Frame>
+
+                <Label Text="Tanggal Lahir"
+                   TextColor="#828282"
+                   FontAttributes="Bold"
+                   FontSize="18"
+                   Margin="0,18,0,0"
+                   LineHeight="2.2"
+                   />
+                <Frame CornerRadius="24"
+                   Padding="24,6,0,6"
+                   BorderColor="#F2F2F2"
+                   Margin="0,10,0,0">
+                    <Entry Text="25 Juni 2000"
+                       HorizontalOptions="FillAndExpand"/>
+                </Frame>
+
+                <Label Text="No Telepon"
+                   TextColor="#828282"
+                   FontAttributes="Bold"
+                   FontSize="18"
+                   Margin="0,18,0,0"
+                   LineHeight="2.2"
+                   />
+                <Frame CornerRadius="24"
+                   Padding="24,6,0,6"
+                   BorderColor="#F2F2F2"
+                   Margin="0,10,0,0">
+                    <Entry Text="085790879889"
+                       HorizontalOptions="FillAndExpand"/>
+                </Frame>
+
+                <Label Text="Alamat Rumah"
+                   TextColor="#828282"
+                   FontAttributes="Bold"
+                   FontSize="18"
+                   Margin="0,18,0,0"
+                   LineHeight="2.2"
+                   />
+                <Frame CornerRadius="24"
+                   Padding="24,6,0,6"
+                   BorderColor="#F2F2F2"
+                   Margin="0,10,0,0">
+                    <Entry Placeholder="Belum Diisi"
+                       HorizontalOptions="FillAndExpand"/>
+                </Frame>
+            </VerticalStackLayout>
+        </Grid>
+    </ScrollView>
+</ContentPage>
