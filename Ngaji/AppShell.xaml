@@ -7,34 +7,55 @@
     xmlns:pages="clr-namespace:Ngaji.Pages"
     xmlns:auth="clr-namespace:Ngaji.Pages.Auth"
     xmlns:read="clr-namespace:Ngaji.Pages.Mengaji"
-    xmlns:order="clr-namespace:Ngaji.Pages.Booking"
+    xmlns:booking="clr-namespace:Ngaji.Pages.Booking"
+    xmlns:profile="clr-namespace:Ngaji.Pages.Profile"
+    xmlns:styles="clr-namespace:Ngaji.Resources.Styles"
     Shell.FlyoutBehavior="Disabled">
     <!--ShellContent
                 ContentTemplate="{DataTemplate order:BookingPage}"
                 Route="LandingPage" >
     </ShellContent-->
     <TabBar>
-        <Tab x:Name="Home" Icon="home.png">
-            <ShellContent
-                ContentTemplate="{DataTemplate pages:LandingPage}"
-                Route="LandingPage" >
-            </ShellContent>
+        <Tab x:Name="Home">
+            <Tab.Icon>
+                <FontImageSource Glyph="{x:Static styles:Icons.IconHome}" FontFamily="icomoon"
+                         FontAutoScalingEnabled="True" />
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate pages:LandingPage}"
+                          Route="LandingPage"/>
+
         </Tab>
-        <Tab x:Name="Read"
-            Icon="bacaan.png">
-            <ShellContent ContentTemplate="{DataTemplate pages:ReadPage}" />
+        <Tab x:Name="Read">
+            <Tab.Icon>
+                <FontImageSource Glyph="{x:Static styles:Icons.IconBook}" FontFamily="icomoon"
+                                FontAutoScalingEnabled="True" />
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate read:SesiMengajiPage}"
+                          Route="ngajiPage"/>
         </Tab>
-        <Tab x:Name="Inbox"
-            Icon="chat.png">
-            <ShellContent ContentTemplate="{DataTemplate pages:InboxPage}" />
+        <Tab x:Name="Inbox">
+            <Tab.Icon>
+                <FontImageSource Glyph="{x:Static styles:Icons.IconInbox}" FontFamily="icomoon"
+                                 FontAutoScalingEnabled="True" />
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate pages:InboxPage}"
+                          Route="inboxPage"/>
         </Tab>
-        <Tab x:Name="Notification"
-            Icon="bell.png">
-            <ShellContent ContentTemplate="{DataTemplate pages:NotifPage}" />
+        <Tab x:Name="Notification">
+            <Tab.Icon>
+                <FontImageSource Glyph="{x:Static styles:Icons.IconNotif}" FontFamily="icomoon"
+                                   FontAutoScalingEnabled="True" />
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate pages:NotifPage}"
+                          Route="notifPage" />
         </Tab>
-        <Tab x:Name="Profile"
-            Icon="profile.png">
-            <ShellContent ContentTemplate="{DataTemplate pages:ProfilePage}" />
+        <Tab x:Name="Profile">
+            <Tab.Icon>
+                <FontImageSource Glyph="{x:Static styles:Icons.IconProfile}" FontFamily="icomoon"
+                         FontAutoScalingEnabled="True" />
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate profile:UserProfile}" 
+                          Route="profilePage" />
         </Tab>
     </TabBar>
     <!--ShellContent

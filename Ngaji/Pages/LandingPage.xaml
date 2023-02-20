@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              x:Class="Ngaji.Pages.LandingPage"
-             Shell.NavBarIsVisible="True" 
-             BackgroundColor="{DynamicResource SecondaryColor}">
+             Shell.NavBarIsVisible="True">
     <Shell.TitleView>
         <FlexLayout JustifyContent="SpaceAround">
             <Image
@@ -53,34 +53,33 @@
                 BackgroundColor="Transparent"
                 CornerRadius="16"
                 Padding="0"
+                Scale="1.5"
                 WidthRequest="280"
-                Scale="1.4"
                 HeightRequest="32"
                 IsClippedToBounds="True"
                 HorizontalOptions="Center"
                 VerticalOptions="Center" >
-                <SearchBar Text="Mulai Mengaji Sekarang" 
+                <SearchBar  x:Name="SearchBar" Placeholder="Mulai Mengaji Sekarang" 
                         FlowDirection="RightToLeft" 
-                        Margin="28,0,28,0"
+                        WidthRequest="280"
                         PlaceholderColor="Black"
                         FontSize="16"
                         FontFamily="Nunito"
                         Background="Transparent"
-                        HorizontalTextAlignment="End"
+                        HorizontalTextAlignment="Center"
                         VerticalOptions="Center"
                         VerticalTextAlignment="Center"
-                        HorizontalOptions="CenterAndExpand"
-                        />
+                        HorizontalOptions="CenterAndExpand">
+                    <SearchBar.Behaviors 
+                        Command="{Binding SearchTermCommand}"
+                        CommandParameter="{Binding Text, Source={x:Reference SearchBar}}"
+                        EventName="TextChanged" />
+                </SearchBar>
             </Frame>
             <Label Text="Ustadz Di Sekitarmu" FontFamily="Nunito-black"
                     FontSize="28"
                     HorizontalOptions="Center" 
                     />
-            <Line X1="40"
-                  Y1="0"
-                  X2="120"
-                  Y2="0" StrokeThickness="2"
-                  Stroke="Red" />
             <VerticalStackLayout Spacing="12">
                 <Border Stroke="#F2F2F2"
                     StrokeThickness="2"
@@ -89,44 +88,44 @@
                     HeightRequest="97"
                     VerticalOptions="Center" 
                     HorizontalOptions="Center">
-                    <ContentView>
-                        <ContentView.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="OnTapGestureRecognizerTapped"  NumberOfTapsRequired="1" />
-                        </ContentView.GestureRecognizers>
-                        <HorizontalStackLayout VerticalOptions="Center" Padding="12"  Spacing="12"
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnTapGestureRecognizerTapped"  NumberOfTapsRequired="1" />
+                    </Border.GestureRecognizers>
+                    <HorizontalStackLayout VerticalOptions="Center" Padding="12"  Spacing="12"
                         HeightRequest="97">
-                            <Frame CornerRadius="12"
+                        <Frame CornerRadius="12"
                                 BorderColor="Black"
                                 BackgroundColor="Transparent"
-                                Padding="0" VerticalOptions="Center"
-                        HorizontalOptions="Center"
+                                Padding="0" 
+                                VerticalOptions="Center"
+                                HorizontalOptions="Center"
                                 WidthRequest="71"
                                 HeightRequest="71" >
-                                <Image Source="avatar.png" WidthRequest="71"
+                            <Image Source="avatar.png" WidthRequest="71"
                                 HeightRequest="71" Aspect="AspectFill"  />
-                            </Frame>
-                            <VerticalStackLayout Spacing="8" VerticalOptions="Center"
-                        HorizontalOptions="Center">
-                                <Label Text="Cheyenne Lewwvin" />
-                                <Label Text="NgajiLagi Official"
+                        </Frame>
+                        <VerticalStackLayout Spacing="8" 
+                                                 VerticalOptions="Center"
+                                                 HorizontalOptions="Center">
+                            <Label Text="Cheyenne Lewwvin" />
+                            <Label Text="NgajiLagi Official"
                                     FontFamily="Nunito"
                                     FontAttributes="Bold"
                                     FontSize="12"
                                     TextColor="{StaticResource Primary}"
                                     HorizontalOptions="Start"/>
-                                <HorizontalStackLayout Spacing="20">
-                                    <HorizontalStackLayout>
-                                        <Image Source="star.png" />
-                                        <Label Text="4.7" />
-                                    </HorizontalStackLayout>
-                                    <HorizontalStackLayout>
-                                        <Image Source="loc.png" />
-                                        <Label Text="Bandung" />
-                                    </HorizontalStackLayout>
+                            <HorizontalStackLayout Spacing="20">
+                                <HorizontalStackLayout>
+                                    <Image Source="star.png" />
+                                    <Label Text="4.7" />
                                 </HorizontalStackLayout>
-                            </VerticalStackLayout>
-                        </HorizontalStackLayout>
-                    </ContentView>
+                                <HorizontalStackLayout>
+                                    <Image Source="loc.png" />
+                                    <Label Text="Bandung" />
+                                </HorizontalStackLayout>
+                            </HorizontalStackLayout>
+                        </VerticalStackLayout>
+                    </HorizontalStackLayout>
                 </Border>
                 
                 <Border Stroke="#F2F2F2"

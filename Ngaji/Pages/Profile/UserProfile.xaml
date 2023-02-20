@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ngaji.Pages.Profile.UserProfile"
+             Title="User Profile"
+             Shell.NavBarIsVisible="False">
+    <ScrollView>
+        <VerticalStackLayout HorizontalOptions="Center" Margin="28">
+            
+            <HorizontalStackLayout Spacing="12" HorizontalOptions="Center">
+                <Frame CornerRadius="20" HorizontalOptions="Center"
+                       BorderColor="Black"
+                       Padding="0"
+                       WidthRequest="120"
+                       HeightRequest="166"
+                       IsClippedToBounds="True">
+                    <Image Source="jacket.jpg"
+                           VerticalOptions="Center"
+                           WidthRequest="123"
+                           HeightRequest="166" 
+                           Aspect="AspectFill" />
+                </Frame>
+                <VerticalStackLayout VerticalOptions="Center">
+                    <Label Text="Fulan Fulana"
+                               FontFamily="Nunito"
+                               FontSize="26"
+                               TextColor="#313131"
+                               FontAttributes="Bold"
+                               LineHeight="1.2"/>
+                    <Label Text="fulan@gmail.com"
+                               FontFamily="Nunito"
+                               FontSize="22"
+                               Margin="0,2,0,0"
+                               LineHeight="2.2"
+                               FontAttributes="Bold"
+                               TextColor="#88984A"
+                               />
+                    <Button Text="Edit Profile"
+                                BackgroundColor="#FFD53F"
+                                CornerRadius="15"
+                                WidthRequest="108"
+                                HeightRequest="30"
+                                Clicked="EditProfile"
+                                HorizontalOptions="Start"
+                                Padding="12,6,12,6"
+                                Margin="0,12,0,0"
+                                TextColor="Black"/>
+                </VerticalStackLayout>
+            </HorizontalStackLayout>
+            <Grid RowDefinitions="*,*,*,*" RowSpacing="24">
+                <Label Grid.Row="0" Text="Ganti Password" HeightRequest="40"
+                        TextColor="#333333"
+                        BackgroundColor="Transparent"
+                        FontSize="22"
+                        Padding="0"
+                        HorizontalOptions="StartAndExpand"
+                        FontFamily="Nunito"
+                        FontAttributes="Bold">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="GantiPassword"  NumberOfTapsRequired="1" />
+                    </Label.GestureRecognizers>
+                </Label>
+                <FlexLayout Grid.Row="1" 
+                            VerticalOptions="Start" 
+                            JustifyContent="SpaceBetween"
+                            HeightRequest="40">
+                    <Label Text="Konsultasi"
+                                TextColor="#333333"
+                                FontFamily="Nunito"
+                                FontAttributes="Bold"
+                                Padding="0"
+                                BackgroundColor="Transparent"
+                                FontSize="22"/>
+                    <Frame Margin="0,0,48,0" VerticalOptions="Center"
+                            Padding="0"  
+                            BorderColor="Transparent"
+                            BackgroundColor="#EB5757"
+                            WidthRequest="25"
+                            HeightRequest="25"
+                            CornerRadius="20"
+                            IsClippedToBounds="True">
+                        <Label Text="1" Padding="2"
+                               VerticalTextAlignment="Center"
+                               HorizontalTextAlignment="Center"
+                               VerticalOptions="Center" 
+                               HorizontalOptions="Center"
+                            WidthRequest="25"
+                            HeightRequest="25"
+                               FontSize="12"
+                               FontFamily="Nunito"
+                               FontAttributes="Bold"
+                               TextColor="White"/>
+                    </Frame>
+                </FlexLayout>
+
+                <Label Grid.Row="2" VerticalOptions="Center"  HeightRequest="40"
+                        Text="Notifikasi"
+                        TextColor="#333333"
+                        FontFamily="Nunito"
+                        FontAttributes="Bold"
+                        FontSize="22"
+                        BackgroundColor="Transparent"/>
+                <Label Grid.Row="3" Text="Logout"  HeightRequest="40"
+                            Margin="0,24,0,0"
+                            TextColor="#EB5757"
+                            FontFamily="Nunito"
+                            FontAttributes="Bold"
+                            FontSize="22"
+                            BackgroundColor="Transparent"
+                            HorizontalOptions="StartAndExpand"/>
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -25,14 +25,12 @@
                    FontSize="28"
                    LineHeight="3.8"/>
             </HorizontalStackLayout>
-            <StackLayout Grid.Row="1">
-                <Frame WidthRequest="153"
+            <Frame WidthRequest="153" Grid.Row="1"
                    HeightRequest="153"
                    CornerRadius="100"
                    Padding="0">
-                    <Image Source="jaket" WidthRequest="500"/>
-                </Frame>
-            </StackLayout>
+                <Image Source="jacket.jpg" WidthRequest="500"/>
+            </Frame>
             <VerticalStackLayout Grid.Row="2" Margin="28,0,28,0">
                 <Label Text="Nama Lengkap"
                    TextColor="#828282"

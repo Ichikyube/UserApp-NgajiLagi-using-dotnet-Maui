@@ -39,20 +39,18 @@
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
+    <MauiImage Update="Resources\Images\read.svg" BaseSize="22.41,19" />
+    <MauiImage Update="Resources\Images\sms.svg" BaseSize="19,19" />
+    <MauiImage Update="Resources\Images\notif.svg" BaseSize="18.8,21.45" />
+    <MauiImage Update="Resources\Images\profil.svg" BaseSize="18,18" />
     <MauiImage Update="Resources\Images\title.svg" BaseSize="300,250" />
-    <MauiImage Update="Resources\Images\arrow.svg" BaseSize="14.67,8.26" />
+    <MauiImage Update="Resources\Images\leftarrow.svg" BaseSize="14.67,8.26" />
     <MauiImage Update="Resources\Images\search.svg" BaseSize="19,19" />
     <MauiImage Update="Resources\Images\star.svg" BaseSize="13.3,12.67" />
     <MauiImage Update="Resources\Images\loc.svg" BaseSize="10.5,15" />
     <MauiImage Update="Resources\Images\logo.svg" BaseSize="34,24" />
-    <MauiImage Update="Resources\Images\home.svg" BaseSize="19,19" />
-    <MauiImage Update="Resources\Images\bacaan.svg" BaseSize="22.41,19" />
-    <MauiImage Update="Resources\Images\bell.svg" BaseSize="18.8,21.45" />
-    <MauiImage Update="Resources\Images\chat.svg" BaseSize="19,19" />
-    <MauiImage Update="Resources\Images\profil.svg" BaseSize="18,18" />
     <MauiImage Update="Resources\Images\calender.svg" />
     <MauiImage Update="Resources\Images\greenpercent.svg" />
-    <MauiImage Update="Resources\Images\leftarrow.svg" />
     <MauiImage Update="Resources\Images\logohorizontal.svg" Color="#ffffff" />
     <MauiImage Update="Resources\Images\percent.svg" />
     <MauiImage Update="Resources\Images\smallrightarrow.svg" />
@@ -69,6 +67,10 @@
 
 		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="Resources\Images\bell.svg" />
 	</ItemGroup>
 
   <ItemGroup>
@@ -102,20 +104,20 @@
     <Compile Update="Pages\Booking\BookPage.xaml.cs">
       <DependentUpon>BookPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Pages\ProfilePage.xaml.cs">
-      <DependentUpon>ProfilePage.xaml</DependentUpon>
-    </Compile>
     <Compile Update="Pages\NotifPage.xaml.cs">
       <DependentUpon>NotifPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Pages\Profile\EditProfile.xaml.cs">
       <DependentUpon>EditProfile.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Pages\Profile\ProfilePage.xaml.cs">
-      <DependentUpon>ProfilePage.xaml</DependentUpon>
+    <Compile Update="Pages\Profile\UserProfile.xaml.cs">
+      <DependentUpon>UserProfile.xaml</DependentUpon>
     </Compile>
     <Compile Update="Pages\ReadPage.xaml.cs">
       <DependentUpon>ReadPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="CustomControls\CalendarView.xaml.cs">
+      <DependentUpon>CalendarView.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 
@@ -141,13 +143,10 @@
     <MauiXaml Update="Pages\Booking\BookPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
-    <MauiXaml Update="Pages\ProfilePage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
     <MauiXaml Update="Pages\Profile\EditProfile.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
-    <MauiXaml Update="Pages\Profile\ProfilePage.xaml">
+    <MauiXaml Update="Pages\Profile\UserProfile.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
     <MauiXaml Update="Pages\ReadPage.xaml">
@@ -159,10 +158,9 @@
     <MauiXaml Update="Pages\NotifPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="CustomControl\" />
+    <MauiXaml Update="CustomControls\CalendarView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
   </ItemGroup>
   
 </Project>

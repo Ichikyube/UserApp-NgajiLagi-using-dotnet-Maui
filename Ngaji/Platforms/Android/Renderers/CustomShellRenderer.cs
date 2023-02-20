@@ -1,9 +1,13 @@
 using Android.Content;
+using Android.Graphics;
+using Android.Views;
 using Android.Widget;
 using Google.Android.Material.BottomNavigation;
+using Google.Android.Material.Tabs;
 using Microsoft.Maui.Controls.Compatibility;
 using Microsoft.Maui.Controls.Compatibility.Platform.Android;
 using Microsoft.Maui.Controls.Handlers.Compatibility;
+using Microsoft.Maui.Controls.Platform;
 using Microsoft.Maui.Controls.Platform.Compatibility;
 using Ngaji;
 using Ngaji.Platforms.Android.Renderers;
@@ -25,6 +29,11 @@ namespace Ngaji.Platforms.Android.Renderers
         {
             return new MyShellBottomNavViewAppearanceTracker();
         }
+
+        protected override IShellTabLayoutAppearanceTracker CreateTabLayoutAppearanceTracker(ShellSection shellSection)
+        {
+            return new MyTabLayoutAppearanceTracker(this);
+        }
     }
 }
 public class MyShellBottomNavViewAppearanceTracker : IShellBottomNavViewAppearanceTracker
@@ -41,5 +50,36 @@ public class MyShellBottomNavViewAppearanceTracker : IShellBottomNavViewAppearan
     {
         (bottomView.Parent as LinearLayout)?.SetBackgroundColor(Colors.White.ToAndroid());
         bottomView.SetBackgroundResource(Ngaji.Resource.Drawable.bottombackground);
+        bottomView.SetElevation(0);
+        bottomView.SetForegroundGravity(GravityFlags.Bottom| GravityFlags.Top);
+    }
+}
+
+public class MyTabLayoutAppearanceTracker : ShellTabLayoutAppearanceTracker
+{
+    public MyTabLayoutAppearanceTracker(IShellContext shellContext) : base(shellContext)
+    {
+    }
+
+    public override void SetAppearance(TabLayout tabLayout, ShellAppearance appearance)
+    {
+        base.SetAppearance(tabLayout, appearance);
+        var displayWidth = (int)Microsoft.Maui.Devices.DeviceDisplay.MainDisplayInfo.Width;
+        for (int i = 0; i < tabLayout.TabCount; i++)
+        {
+            TabLayout.Tab tab = tabLayout.GetTabAt(i);
+            if (tab.CustomView == null)
+            {
+                TextView textview = new TextView(Android.App.Application.Context)
+                {
+                    Text = tabLayout.GetTabAt(i).Text,
+                    TextSize = 20,
+                    Typeface = Typeface.DefaultBold,
+                    Gravity = GravityFlags.Bottom
+                };
+                textview.SetWidth(displayWidth / 2);
+                tab.SetCustomView(textview);
+            }
+        }
     }
 }

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<StackLayout xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:Ngaji.Models" 
+             x:Name="this"
+             x:Class="Ngaji.CustomControls.CalendarView">
+    <CollectionView ItemsSource="{Binding Source={x:Reference this}, Path=Dates}">
+        <CollectionView.ItemsLayout>
+            <LinearItemsLayout Orientation="Horizontal" ItemSpacing="12"/>
+        </CollectionView.ItemsLayout>
+        <CollectionView.ItemTemplate>
+            <DataTemplate x:DataType="models:CalendarModel">
+                <Border WidthRequest="80" 
+                        Stroke="#88984A"
+                        Background="#88984A"
+                        StrokeThickness="2"
+                        Padding="12">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="8" />
+                    </Border.StrokeShape>
+                    <VerticalStackLayout>
+                        <Label Text="{Binding Date, StringFormat='{0:ddd}'}" 
+                               HorizontalOptions="Center"
+                               HorizontalTextAlignment="Center" 
+                               TextColor="White"
+                               FontSize="12" />
+                        <Label Text="{Binding Date, StringFormat='{0:d }'}" 
+                               HorizontalOptions="Center"
+                               HorizontalTextAlignment="Center" 
+                               TextColor="White"
+                               FontSize="24"
+                               FontAttributes="Bold" />
+                    </VerticalStackLayout>
+                </Border>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+</StackLayout>

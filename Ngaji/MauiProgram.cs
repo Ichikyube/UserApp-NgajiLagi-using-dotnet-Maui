@@ -10,6 +10,7 @@ public static class MauiProgram
             .UseMauiCompatibility()
             .ConfigureFonts(fonts =>
             {
+                fonts.AddFont("icomoon.ttf", "icomoon");
                 fonts.AddFont("Nunito-Italic-VariableFont_wght.ttf", "NunitoItalic");
                 fonts.AddFont("Nunito-VariableFont_wght.ttf", "Nunito");
                 fonts.AddFont("Nunito-Black.ttf", "Nunito-black");

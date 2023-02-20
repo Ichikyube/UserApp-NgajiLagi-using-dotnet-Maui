@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:customControls="clr-namespace:Ngaji.CustomControls"
              x:Class="Ngaji.Pages.Booking.BookingPage"
              Title="Book Appointment">
 
@@ -11,6 +12,7 @@
                 TextColor="Black"
                 FontFamily="Nunito-extrabold"
                 FontSize="24"/>
+        <customControls:CalendarView />
 
         <FlexLayout JustifyContent="SpaceBetween">
             <Label Text="February 2021"
@@ -23,135 +25,7 @@
                        TextColor="#2F80ED"
                        FontSize="14"/>
         </FlexLayout>
-        <HorizontalStackLayout HorizontalOptions="Center"
-                                       Spacing="12">
-            <Border Stroke="#88984A"
-                        Background="#88984A"
-                        StrokeThickness="2"
-                        Padding="12">
-                <Border.StrokeShape>
-                    <RoundRectangle CornerRadius="8" />
-                </Border.StrokeShape>
-                <VerticalStackLayout>
-                    <Label Text="Sun"
-                               HorizontalOptions="Center"
-                               TextColor="White"
-                               FontSize="12"/>
-                    <Label Text="25"
-                               HorizontalOptions="Center"
-                               TextColor="White"
-                               FontSize="24"/>
-                </VerticalStackLayout>
-            </Border>
-            <Border Stroke="#F2F2F2"
-                        Background="White"
-                        StrokeThickness="2"
-                        Padding="12">
-                <Border.StrokeShape>
-                    <RoundRectangle CornerRadius="8" />
-                </Border.StrokeShape>
-                <VerticalStackLayout>
-                    <Label Text="Sun"
-                               HorizontalOptions="Center"
-                               TextColor="Black"
-                               FontSize="12"/>
-                    <Label Text="26"
-                               HorizontalOptions="Center"
-                               TextColor="Black"
-                               FontSize="24"/>
-                </VerticalStackLayout>
-            </Border>
-            <Border Stroke="#F2F2F2"
-                        Background="White"
-                        StrokeThickness="2"
-                        Padding="12">
-                <Border.StrokeShape>
-                    <RoundRectangle CornerRadius="8" />
-                </Border.StrokeShape>
-                <VerticalStackLayout>
-                    <Label Text="Sun"
-                               HorizontalOptions="Center"
-                               TextColor="#D3D3D3"
-                               FontSize="12"/>
-                    <Label Text="27"
-                               HorizontalOptions="Center"
-                               TextColor="#D3D3D3"
-                               FontSize="27"/>
-                </VerticalStackLayout>
-            </Border>
-            <Border Stroke="#F2F2F2"
-                        Background="White"
-                        StrokeThickness="2"
-                        Padding="12">
-                <Border.StrokeShape>
-                    <RoundRectangle CornerRadius="8" />
-                </Border.StrokeShape>
-                <VerticalStackLayout>
-                    <Label Text="Sun"
-                               HorizontalOptions="Center"
-                               TextColor="Black"
-                               FontSize="12"/>
-                    <Label Text="28"
-                               HorizontalOptions="Center"
-                               TextColor="Black"
-                               FontSize="27"/>
-                </VerticalStackLayout>
-            </Border>
-            <Border Stroke="#F2F2F2"
-                        Background="White"
-                        StrokeThickness="2"
-                        Padding="12">
-                <Border.StrokeShape>
-                    <RoundRectangle CornerRadius="8" />
-                </Border.StrokeShape>
-                <VerticalStackLayout>
-                    <Label Text="Sun"
-                               HorizontalOptions="Center"
-                               TextColor="Black"
-                               FontSize="12"/>
-                    <Label Text="29"
-                               HorizontalOptions="Center"
-                               TextColor="Black"
-                               FontSize="27"/>
-                </VerticalStackLayout>
-            </Border>
-            <Border Stroke="#F2F2F2"
-                    Background="White"
-                    StrokeThickness="2"
-                    Padding="12">
-                <Border.StrokeShape>
-                    <RoundRectangle CornerRadius="8" />
-                </Border.StrokeShape>
-                <VerticalStackLayout>
-                    <Label Text="Sun"
-                            HorizontalOptions="Center"
-                            TextColor="Black"
-                            FontSize="12"/>
-                    <Label Text="30"
-                            HorizontalOptions="Center"
-                            TextColor="Black"
-                            FontSize="27"/>
-                </VerticalStackLayout>
-            </Border>
-            <Border Stroke="#F2F2F2"
-                    Background="White"
-                    StrokeThickness="2"
-                    Padding="12">
-                <Border.StrokeShape>
-                    <RoundRectangle CornerRadius="8" />
-                </Border.StrokeShape>
-                <VerticalStackLayout>
-                    <Label Text="Sun"
-                            HorizontalOptions="Center"
-                            TextColor="Black"
-                            FontSize="12"/>
-                    <Label Text="31"
-                            HorizontalOptions="Center"
-                            TextColor="Black"
-                            FontSize="27"/>
-                </VerticalStackLayout>
-            </Border>
-        </HorizontalStackLayout>
+        
         <HorizontalStackLayout Padding="0" HeightRequest="18">
             <Ellipse Fill="#313131"
                          WidthRequest="10"

@@ -50,17 +50,17 @@
 
                     <VerticalStackLayout Margin="0,24,0,0">
                         <Label Text="Yang akan datang" FontSize="24" FontFamily="NunitoBold" />
-                        
+
                         <HorizontalStackLayout Padding="0,24,0,16" Spacing="12">
-                                
+
                             <Image Source="user2.png" WidthRequest="54" HeightRequest="54" />
 
                             <VerticalStackLayout Spacing="4" VerticalOptions="Center">
-                                    <Label Text="Dalene Robertson" 
+                                <Label Text="Dalene Robertson" 
                                         FontFamily="NunitoBold"
                                         FontSize="20"
                                     />
-                                    <Label Text="Sabtu, 3 Apr 2021  •  13:00 PM " 
+                                <Label Text="Sabtu, 3 Apr 2021  •  13:00 PM " 
                                         FontFamily="NunitoRegular"
                                         FontSize="13"
                                         TextColor="#88984A"
@@ -68,20 +68,20 @@
                             </VerticalStackLayout>
 
                         </HorizontalStackLayout>
-                        
+
                         <Line Stroke="#F2F2F2"
                         X2="350" />
 
                         <HorizontalStackLayout Padding="0,16,0,16" Spacing="12">
-                                
+
                             <Image Source="user2.png" WidthRequest="54" HeightRequest="54" />
 
                             <VerticalStackLayout Spacing="4" VerticalOptions="Center">
-                                    <Label Text="Dalene Robertson" 
+                                <Label Text="Dalene Robertson" 
                                         FontFamily="NunitoBold"
                                         FontSize="20"
                                     />
-                                    <Label Text="Sabtu, 3 Apr 2021  •  13:00 PM " 
+                                <Label Text="Sabtu, 3 Apr 2021  •  13:00 PM " 
                                         FontFamily="NunitoRegular"
                                         FontSize="13"
                                         TextColor="#88984A"
@@ -89,41 +89,15 @@
                             </VerticalStackLayout>
 
                         </HorizontalStackLayout>
-                        
+
                         <Line Stroke="#F2F2F2"
                         X2="350" />
                     </VerticalStackLayout>
-                
+
                 </VerticalStackLayout>
             </ScrollView>
 
         </FlexLayout>
-
-        <!-- Footer -->
-        <VerticalStackLayout VerticalOptions="End">
-            <Border StrokeThickness="1"
-                    Stroke="#88984A"
-                    StrokeShape="RoundRectangle 24,24,0,0"
-                    Background="#FFF"
-                    Padding="43,20,43,9"
-                    HorizontalOptions="FillAndExpand">
-                <VerticalStackLayout Spacing="42">
-                    <HorizontalStackLayout Spacing="32">
-                        <HorizontalStackLayout Spacing="12">
-                            <Image Source="homeroot.svg" WidthRequest="19" HeightRequest="19" />
-                            <Label Text="Home" FontFamily="NunitoBold" FontAttributes="Bold" FontSize="18" TextColor="#F0B70D" />
-                        </HorizontalStackLayout>
-                        <ImageButton Source="result2.svg" WidthRequest="19" HeightRequest="19" />
-                        <ImageButton Source="notification.svg" WidthRequest="19" HeightRequest="19" />
-                        <ImageButton Source="book.svg" WidthRequest="19" HeightRequest="19" />
-                        <ImageButton Source="settings.svg" WidthRequest="19" HeightRequest="19" />
-                    </HorizontalStackLayout>
-                    <VerticalStackLayout HorizontalOptions="Center">
-                        <Image Source="homeindicator.svg" />
-                    </VerticalStackLayout>
-                </VerticalStackLayout>    
-            </Border>
-        </VerticalStackLayout>
     </FlexLayout>
 
 </ContentPage>
