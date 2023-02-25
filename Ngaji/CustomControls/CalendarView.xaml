@@ -1,38 +1,129 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <StackLayout xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:models="clr-namespace:Ngaji.Models" 
+             xmlns:styles="clr-namespace:Ngaji.Resources.Styles"
+             xmlns:calendar="clr-namespace:Ngaji.Models.Calendar" 
              x:Name="this"
              x:Class="Ngaji.CustomControls.CalendarView">
-    <CollectionView ItemsSource="{Binding Source={x:Reference this}, Path=Dates}">
+
+    <FlexLayout JustifyContent="SpaceBetween">
+        <Label 
+            Text="{Binding Source={x:Reference this}, Path=SelectedDate, StringFormat='{0: dd MMMM yyyy }'}"
+            FlexLayout.AlignSelf="Start"
+            TextColor="Black"
+            FontSize="18"
+            FontAttributes="Bold"/>
+        <!--Label 
+            Text="lihat kalender"
+            FlexLayout.AlignSelf="End"
+            TextColor="#2F80ED"
+            FontSize="14"/>-->
+        <HorizontalStackLayout 
+        Spacing="20" HorizontalOptions="End">
+            <Image 
+            HeightRequest="15" 
+            WidthRequest="15">
+                <Image.Source>
+                    <FontImageSource Color="Blue"
+                    Glyph="{x:Static styles:Icons.IconLeftCarret}" 
+                    FontFamily="icomoon" FontAutoScalingEnabled="True" />
+                </Image.Source>
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding Source={x:Reference this}, Path=PreviousMonthCommand}" />
+                </Image.GestureRecognizers>
+            </Image>
+            <Image 
+            HeightRequest="15" 
+            WidthRequest="15">
+                <Image.Source>
+                    <FontImageSource Color="Blue"
+                    Glyph="{x:Static styles:Icons.IconRightCarret}" 
+                    FontFamily="icomoon" FontAutoScalingEnabled="True" />
+                </Image.Source>
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding Source={x:Reference this}, Path=NextMonthCommand}" />
+                </Image.GestureRecognizers>
+            </Image>
+        </HorizontalStackLayout>
+    </FlexLayout>
+    
+    <CollectionView x:Name="collectionview"
+        HorizontalScrollBarVisibility="Never" HorizontalOptions="FillAndExpand"
+        ItemsSource="{Binding Source={x:Reference this}, Path=Dates}"
+        Margin="0,0,0,20">
         <CollectionView.ItemsLayout>
-            <LinearItemsLayout Orientation="Horizontal" ItemSpacing="12"/>
+            <LinearItemsLayout Orientation="Horizontal" ItemSpacing="12" />
         </CollectionView.ItemsLayout>
         <CollectionView.ItemTemplate>
-            <DataTemplate x:DataType="models:CalendarModel">
-                <Border WidthRequest="80" 
-                        Stroke="#88984A"
-                        Background="#88984A"
-                        StrokeThickness="2"
-                        Padding="12">
+            <DataTemplate x:DataType="calendar:CalendarModel">
+                <Border StrokeThickness="2" Margin="0">
                     <Border.StrokeShape>
                         <RoundRectangle CornerRadius="8" />
                     </Border.StrokeShape>
-                    <VerticalStackLayout>
+                    <VerticalStackLayout 
+                        WidthRequest="64"
+                        HeightRequest="74" Spacing="4"
+                        Padding="12">
                         <Label Text="{Binding Date, StringFormat='{0:ddd}'}" 
                                HorizontalOptions="Center"
                                HorizontalTextAlignment="Center" 
-                               TextColor="White"
-                               FontSize="12" />
-                        <Label Text="{Binding Date, StringFormat='{0:d }'}" 
+                               HeightRequest="14"
+                               FontFamily="Poppins-medium"
+                               FontSize="12" >
+                            <Label.Triggers>
+                                <DataTrigger TargetType="Label" Binding="{Binding IsCurrentDate}" Value="True">
+                                    <Setter Property="TextColor" Value="White" />
+                                </DataTrigger>
+                            </Label.Triggers>
+                        </Label>
+                        <Label Text="{Binding Date, StringFormat='{0:d }'}"
                                HorizontalOptions="Center"
                                HorizontalTextAlignment="Center" 
-                               TextColor="White"
-                               FontSize="24"
-                               FontAttributes="Bold" />
+                               FontFamily="Poppins-semibold"
+                               FontSize="24" >
+                            <Label.Triggers>
+                                <DataTrigger TargetType="Label" Binding="{Binding IsCurrentDate}" Value="True">
+                                    <Setter Property="TextColor" Value="White" />
+                                </DataTrigger>
+                            </Label.Triggers>
+                        </Label>
                     </VerticalStackLayout>
+                    <Border.Triggers>
+                        <DataTrigger TargetType="Border" Binding="{Binding IsCurrentDate}" Value="True">
+                            <Setter Property="BackgroundColor" Value="#88984A" />
+                            <Setter Property="Stroke" Value="#88984A" />
+                        </DataTrigger>
+                        <DataTrigger TargetType="Border" Binding="{Binding IsCurrentDate}" Value="False">
+                            <Setter Property="BackgroundColor" Value="Transparent" />
+                            <Setter Property="Stroke" Value="#F2F2F2" />
+                        </DataTrigger>
+                    </Border.Triggers>
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding Source={x:Reference this},Path=CurrentDateCommand}" CommandParameter="{Binding .}" />
+                    </Border.GestureRecognizers>
                 </Border>
             </DataTemplate>
         </CollectionView.ItemTemplate>
     </CollectionView>
+
+    <HorizontalStackLayout HeightRequest="18">
+        <Ellipse Fill="#313131"
+                         WidthRequest="10"
+                         HeightRequest="10"
+                         Margin="0, 0, 8, 0"/>
+        <Label Text="Tersedia"
+                       TextColor="Black"
+                       FontSize="13"
+                       LineHeight="18"
+                       Margin="0, 0, 20, 0"/>
+        <Ellipse Fill="#88984A"
+                         WidthRequest="10"
+                         HeightRequest="10"
+                         Margin="0, 0, 8, 0"/>
+        <Label Text="Dipilih"
+                       TextColor="Black"
+                       FontSize="13"
+                       LineHeight="18"
+                       Margin="0, 0, 20, 0"/>
+    </HorizontalStackLayout>
 </StackLayout>

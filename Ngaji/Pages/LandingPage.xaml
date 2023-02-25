@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:styles="clr-namespace:Ngaji.Resources.Styles"
              x:Class="Ngaji.Pages.LandingPage"
              Shell.NavBarIsVisible="True">
     <Shell.TitleView>
@@ -13,41 +14,53 @@
                     Margin="16,12,16,12"
                     Aspect="AspectFit"
                     HorizontalOptions="Start"/>
-            <HorizontalStackLayout >
-                <Button Text="Masuk"
-                            class="Rounded"
-                            CornerRadius="32"
-                            Padding="16,12,16,12"
-                            FontFamily="Nunito-black"
-                            FontSize="16"
-                            BorderColor="Transparent"
-                            TextColor="{StaticResource Primary}"
-                            BackgroundColor="Transparent"
-                            HorizontalOptions="End"
-                            VerticalOptions="Center"
-                            WidthRequest="82"
-                            HeightRequest="40"
-                            Clicked="GotoLogin"/>
+            <Button x:Name="authtitle"
+                Text="Keluar"
+                CornerRadius="16"
+                Padding="16,12,16,12"
+                FontFamily="Nunito-black"
+                FontSize="16"
+                TextColor="White"
+                BorderColor="Transparent"
+                BackgroundColor="{StaticResource Primary}"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                WidthRequest="82"
+                HeightRequest="40"
+                Clicked="GotoLogin"/>
+            <HorizontalStackLayout x:Name="guesttitle">
+                <Button x:Name="titlelogin"
+                    Text="Masuk"
+                    CornerRadius="32"
+                    Padding="16,12,16,12"
+                    FontFamily="Nunito-black"
+                    FontSize="16"
+                    BorderColor="Transparent"
+                    TextColor="{StaticResource Primary}"
+                    BackgroundColor="Transparent"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    WidthRequest="82"
+                    HeightRequest="40"
+                    Clicked="GotoLogin"/>
 
-                <Button Text="Daftar"
-                            class="Rounded"
-                            CornerRadius="16"
-                            Padding="16,12,16,12"
-                            FontSize="12"
-                            FontFamily="Nunito-black"
-                            TextColor="White"
-                            BorderColor="Transparent"
-                            BackgroundColor="{StaticResource Primary}"
-                            HorizontalOptions="Center"
-                            VerticalOptions="Center"
-                            WidthRequest="82"
-                            HeightRequest="40"/>
+                <Button x:Name="titleregister"
+                    Text="Daftar" 
+                    CornerRadius="16"
+                    FontSize="16"
+                    FontFamily="Nunito-black"
+                    TextColor="White"
+                    BorderColor="{StaticResource Primary}"
+                    BackgroundColor="{StaticResource Primary}"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    WidthRequest="82"
+                    HeightRequest="40"/>
             </HorizontalStackLayout>
         </FlexLayout>
     </Shell.TitleView>
     <ScrollView>
-        <VerticalStackLayout Padding="28"
-        Spacing="25">
+        <VerticalStackLayout Padding="28" Spacing="25">
             <Frame
                 BorderColor="Black"
                 BackgroundColor="Transparent"
@@ -116,11 +129,21 @@
                                     HorizontalOptions="Start"/>
                             <HorizontalStackLayout Spacing="20">
                                 <HorizontalStackLayout>
-                                    <Image Source="star.png" />
+                                    <Image>
+                                        <Image.Source>
+                                            <FontImageSource Glyph="{x:Static styles:Icons.IconStar}" FontFamily="icomoon"
+                                                             FontAutoScalingEnabled="True" />
+                                        </Image.Source>
+                                    </Image>
                                     <Label Text="4.7" />
                                 </HorizontalStackLayout>
                                 <HorizontalStackLayout>
-                                    <Image Source="loc.png" />
+                                    <Image>
+                                        <Image.Source>
+                                            <FontImageSource Glyph="{x:Static styles:Icons.IconLocation}" FontFamily="icomoon"
+                                                             FontAutoScalingEnabled="True" />
+                                        </Image.Source>
+                                    </Image>
                                     <Label Text="Bandung" />
                                 </HorizontalStackLayout>
                             </HorizontalStackLayout>

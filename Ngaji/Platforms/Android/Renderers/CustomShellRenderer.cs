@@ -2,6 +2,7 @@ using Android.Content;
 using Android.Graphics;
 using Android.Views;
 using Android.Widget;
+using Google.Android.Material.BottomAppBar;
 using Google.Android.Material.BottomNavigation;
 using Google.Android.Material.Tabs;
 using Microsoft.Maui.Controls.Compatibility;
@@ -24,10 +25,10 @@ namespace Ngaji.Platforms.Android.Renderers
         public CustomShellRenderer(Context context) : base(context)
         {
         }
-
+        
         protected override IShellBottomNavViewAppearanceTracker CreateBottomNavViewAppearanceTracker(ShellItem shellItem)
         {
-            return new MyShellBottomNavViewAppearanceTracker();
+            return new MyShellBottomNavViewAppearanceTracker(this, shellItem);
         }
 
         protected override IShellTabLayoutAppearanceTracker CreateTabLayoutAppearanceTracker(ShellSection shellSection)
@@ -36,22 +37,31 @@ namespace Ngaji.Platforms.Android.Renderers
         }
     }
 }
-public class MyShellBottomNavViewAppearanceTracker : IShellBottomNavViewAppearanceTracker
+public class MyShellBottomNavViewAppearanceTracker : ShellBottomNavViewAppearanceTracker
 {
-    public void Dispose()
+    public MyShellBottomNavViewAppearanceTracker(IShellContext shellContext, ShellItem shellItem) : base(shellContext, shellItem)
+    {
+    }
+    public new void Dispose()
+    {
+        Dispose(true);
+        GC.SuppressFinalize(this);
+    }
+    public static void ResetAppearance()
     {
     }
 
-    public void ResetAppearance(BottomNavigationView bottomView)
+    public override void SetAppearance(BottomNavigationView bottomView, IShellAppearanceElement appearance)
     {
-    }
-
-    public void SetAppearance(BottomNavigationView bottomView, IShellAppearanceElement appearance)
-    {
-        (bottomView.Parent as LinearLayout)?.SetBackgroundColor(Colors.White.ToAndroid());
+        base.SetAppearance(bottomView, appearance);
+        bottomView.SetMinimumHeight(180);
+        //bottomView.LayoutParameters.Height = 70;
+       (bottomView.Parent as LinearLayout)?.SetBackgroundColor(Colors.White.ToAndroid());
         bottomView.SetBackgroundResource(Ngaji.Resource.Drawable.bottombackground);
-        bottomView.SetElevation(0);
-        bottomView.SetForegroundGravity(GravityFlags.Bottom| GravityFlags.Top);
+        bottomView.SetForegroundGravity(GravityFlags.CenterVertical);
+        bottomView.Elevation = 0;
+        bottomView.Bottom = bottomView.Baseline;
+        bottomView.LabelVisibilityMode = 0;
     }
 }
 
@@ -64,13 +74,15 @@ public class MyTabLayoutAppearanceTracker : ShellTabLayoutAppearanceTracker
     public override void SetAppearance(TabLayout tabLayout, ShellAppearance appearance)
     {
         base.SetAppearance(tabLayout, appearance);
+        tabLayout.SetElevation(0);
+        tabLayout.SetForegroundGravity(GravityFlags.Bottom);
         var displayWidth = (int)Microsoft.Maui.Devices.DeviceDisplay.MainDisplayInfo.Width;
         for (int i = 0; i < tabLayout.TabCount; i++)
         {
             TabLayout.Tab tab = tabLayout.GetTabAt(i);
             if (tab.CustomView == null)
             {
-                TextView textview = new TextView(Android.App.Application.Context)
+                TextView textview = new(Android.App.Application.Context)
                 {
                     Text = tabLayout.GetTabAt(i).Text,
                     TextSize = 20,

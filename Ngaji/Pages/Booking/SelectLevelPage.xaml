@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ngaji.Pages.Booking.SelectLevelPage"
+             x:Name="SelectLevel">
+    <Grid RowDefinitions="Auto,*,Auto" Padding="28,28,28,24">
+        <!-- <VerticalStackLayout
+            Padding="28,30,28,30"> -->
+        <Label
+            Grid.Row="0"
+            Text="Pilih Level Mengajimu"
+            FontSize="24"
+            FontFamily="Nunito"
+            Margin="0,48,0,48"
+            FontAttributes="Bold"
+            TextColor="#313131"
+            HorizontalOptions="Center" 
+            HorizontalTextAlignment="Center" />
+        <VerticalStackLayout Grid.Row="1" Spacing="15">
+            <Frame
+                x:Name="fawal"
+                Padding="33,30,33,30"
+                CornerRadius="24"
+                Background="#FFF">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="SelectAwal" NumberOfTapsRequired="1" />
+                </Frame.GestureRecognizers>
+
+                <Label x:Name="awal" TextColor="#000" LineBreakMode="WordWrap">
+                    <Label.FormattedText Spacing="12">
+                        <FormattedString>
+                            <Span Text="Mulai dari Awal&#10;" FontAttributes="Bold" FontSize="20"/>
+                            <Span Text="&#10;"></Span>
+                            <Span Text="Baru Pertama Kali Belajar" FontSize="16" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </Frame>
+            <Frame
+                x:Name="fsedikit"
+                Padding="33,30,33,30"
+                CornerRadius="24"
+                Background="#FFF">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="SelectSedikit" NumberOfTapsRequired="1" />
+                </Frame.GestureRecognizers>
+
+                <Label x:Name="sedikit" TextColor="#000" LineBreakMode="WordWrap">
+                    <Label.FormattedText Spacing="12">
+                        <FormattedString>
+                            <Span Text="Sudah Mengerti Sedikit&#10;" FontAttributes="Bold" FontSize="20"/>
+                            <Span Text="&#10;"></Span>
+                            <Span Text="Caritau level disini" FontSize="16" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </Frame>
+            <Frame
+                x:Name="flanjutan"
+                Padding="33,30,33,30"
+                CornerRadius="24"
+                Background="#FFF">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="SelectLanjutan" NumberOfTapsRequired="1"/>
+                </Frame.GestureRecognizers>
+
+                <Label x:Name="lanjutan" TextColor="#000" LineBreakMode="WordWrap">
+                    <Label.FormattedText Spacing="12">
+                        <FormattedString>
+                            <Span Text="Ingin Belajar Lebih&#10;" FontAttributes="Bold" FontSize="20"/>
+                            <Span Text="&#10;"></Span>
+                            <Span Text="Caritau level disini" FontSize="16" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </Frame>
+        </VerticalStackLayout>
+        <!-- <StackLayout VerticalOptions="End"> -->
+        <!-- middle controls -->
+        <Button
+            Grid.Row="2"
+            x:Name="gantiLevel"
+            Text="Ganti Level Mengaji"
+            TextColor="#FFF"
+            Background="#C0C0C0"
+            Padding="90,20,90,20"
+            CornerRadius="32"
+            HorizontalOptions="Fill" />
+        <!-- </StackLayout> -->
+        <!-- </VerticalStackLayout> -->
+    </Grid>
+</ContentPage>

@@ -15,6 +15,6 @@ public partial class EditProfile : ContentPage
 
     private async void BackImage(object sender, EventArgs e)
     {
-        await Navigation.PushModalAsync(new UserProfile());
+        await Shell.Current.GoToAsync("..");
     }
 }

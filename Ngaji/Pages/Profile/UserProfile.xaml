@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Ngaji.Pages.Profile.UserProfile"
-             Title="User Profile"
+             Title="User User"
              Shell.NavBarIsVisible="False">
     <ScrollView>
         <VerticalStackLayout HorizontalOptions="Center" Margin="28">
@@ -35,7 +35,7 @@
                                FontAttributes="Bold"
                                TextColor="#88984A"
                                />
-                    <Button Text="Edit Profile"
+                    <Button Text="Edit User"
                                 BackgroundColor="#FFD53F"
                                 CornerRadius="15"
                                 WidthRequest="108"

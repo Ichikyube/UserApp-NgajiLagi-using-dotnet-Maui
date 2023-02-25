@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ngaji.Pages.Auth.Register.ChooseLevel"
+             Shell.TabBarIsVisible="False"
+             Shell.NavBarIsVisible="False"
+             NavigationPage.HasNavigationBar="False"
+             Title="Choose Level">
+
+    <Grid RowDefinitions="*,Auto" Padding="28">
+        <StackLayout Grid.Row="0">
+            <HorizontalStackLayout Spacing="24">
+                <ImageButton Source="arrowleft.svg" Clicked="GoBack_Clicked" />
+                <Frame Padding="0" BackgroundColor="#F2F2F2" WidthRequest="287" HeightRequest="12">
+                    <Frame 
+                        Margin="0"
+                        Padding="0"
+                        HorizontalOptions="Start"
+                        BackgroundColor="#88984A" 
+                        HeightRequest="12" 
+                        WidthRequest="70" 
+                        BorderColor="Transparent" />
+                </Frame>
+            </HorizontalStackLayout>
+            <VerticalStackLayout HorizontalOptions="Center" Spacing="14" Margin="0,48,0,24">
+                <Label Text="Pilih Level" FontSize="28" HorizontalTextAlignment="Center" FontFamily="NunitoBold" FontAttributes="Bold" />
+                <Label Text="Jalur bisa di ganti nanti" HorizontalTextAlignment="Center" TextColor="#7A7585" FontFamily="Nunito" FontSize="14" />
+            </VerticalStackLayout>
+            <VerticalStackLayout Spacing="20">
+                <Frame Padding="30" BorderColor="#F2F2F2" CornerRadius="24">
+                    <VerticalStackLayout Spacing="4">
+                        <Label Text="Baru Pertama Kali Belajar" FontSize="16" FontFamily="NunitoBold" Grid.Column="0" />
+                        <Label Text="Mulai dari awal" FontSize="16" FontFamily="Nunito" Grid.Column="1" />
+                    </VerticalStackLayout>
+                </Frame>
+                <Frame Padding="30" BorderColor="#F2F2F2" CornerRadius="24">
+                    <VerticalStackLayout Spacing="4">
+                        <Label Text="Sudah Mengerti Sedikit" FontSize="16" FontFamily="NunitoBold" Grid.Column="0" />
+                        <Label Text="Cari tahu level disini" FontSize="16" FontFamily="Nunito" Grid.Column="1" />
+                    </VerticalStackLayout>
+                </Frame>
+                <Frame Padding="30" BorderColor="#F2F2F2" CornerRadius="24">
+                    <VerticalStackLayout Spacing="4">
+                        <Label Text="Baru Pertama Kali Belajar" FontSize="16" FontFamily="NunitoBold" Grid.Column="0" />
+                        <Label Text="Cari tahu level disini" FontSize="16" FontFamily="Nunito" Grid.Column="1" />
+                    </VerticalStackLayout>
+                </Frame>
+            </VerticalStackLayout>
+        </StackLayout>
+        <Button Text="Lanjutkan" 
+                VerticalOptions="End" 
+                Padding="0,20,0,20" 
+                CornerRadius="32" 
+                FontSize="20" 
+                FontFamily="NunitoBold" 
+                FontAttributes="Bold" 
+                Clicked="Next_Clicked"
+        />
+    </Grid>
+
+</ContentPage>

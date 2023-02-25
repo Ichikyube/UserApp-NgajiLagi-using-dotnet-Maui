@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ngaji.Pages.Auth.Register.CreateProfile"
+             Shell.TabBarIsVisible="False"
+             Shell.NavBarIsVisible="False"
+             NavigationPage.HasNavigationBar="False"
+             Title="Create User">
+    
+    <Grid RowDefinitions="*,Auto" Padding="28">
+        <StackLayout Grid.Row="0">
+            <Grid RowDefinitions="Auto,420">
+                <VerticalStackLayout Grid.Row="0">
+                    <HorizontalStackLayout Spacing="24">
+                        <ImageButton Source="arrowleft.svg" Clicked="Goback_Clicked" />
+                        <Frame Padding="0" BackgroundColor="#F2F2F2" WidthRequest="287" HeightRequest="12">
+                            <Frame 
+                                Margin="0"
+                                Padding="0"
+                                HorizontalOptions="Start"
+                                BackgroundColor="#88984A" 
+                                HeightRequest="12" 
+                                WidthRequest="70" 
+                                BorderColor="Transparent" />
+                        </Frame>
+                    </HorizontalStackLayout>
+                    <VerticalStackLayout HorizontalOptions="Center" Spacing="14" Margin="0,48,0,24">
+                        <Label Text="Buat User" FontSize="28" HorizontalTextAlignment="Center" FontFamily="NunitoBold" FontAttributes="Bold" />
+                        <Label Text="Lengkapi  formulir dan buat akunmu" HorizontalTextAlignment="Center" TextColor="#7A7585" FontFamily="Nunito" FontSize="14" />
+                    </VerticalStackLayout>
+                </VerticalStackLayout>
+                <ScrollView Orientation="Vertical" VerticalScrollBarVisibility="Never" Grid.Row="1">
+                    <StackLayout Spacing="24">
+                        <VerticalStackLayout Spacing="10">
+                            <Label Text="Nama Lengkap" TextColor="#828282" FontFamily="Nunito" FontSize="16" FontAttributes="Bold" />
+                            <Frame BorderColor="#F2F2F2" Padding="24,12,24,12" CornerRadius="24">
+                                <Entry Placeholder="Enter your full name" />
+                            </Frame>
+                        </VerticalStackLayout>
+                        <VerticalStackLayout Spacing="10">
+                            <Label Text="Tanggal Lahir" TextColor="#828282" FontFamily="Nunito" FontSize="16" FontAttributes="Bold" />
+                            <Frame BorderColor="#F2F2F2" Padding="24,12,24,12" CornerRadius="24">
+                                <Grid ColumnDefinitions="*,Auto">
+                                    <DatePicker 
+                                    />
+                                </Grid>
+                            </Frame>
+                        </VerticalStackLayout>
+                        <VerticalStackLayout Spacing="10">
+                            <Label Text="Jenis Kelamin" TextColor="#828282" FontFamily="Nunito" FontSize="16" FontAttributes="Bold" />
+                            <Grid ColumnDefinitions="*,*" ColumnSpacing="12">
+                                <Frame Grid.Column="0" BorderColor="#F2F2F2" Padding="16,12,16,12" CornerRadius="24">
+                                    <HorizontalStackLayout Spacing="10">
+                                        <CheckBox Color="#F2F2F2" />
+                                        <Label VerticalOptions="Center" Text="Laki-Laki" FontSize="16" FontAttributes="Bold" FontFamily="NunitoBold" />
+                                    </HorizontalStackLayout>
+                                </Frame>
+                                <Frame Grid.Column="1" BorderColor="#F2F2F2" Padding="16,12,16,12" CornerRadius="24">
+                                    <HorizontalStackLayout Spacing="10">
+                                        <CheckBox Color="#F2F2F2" />
+                                        <Label VerticalOptions="Center" Text="Perempuan" FontSize="16" FontAttributes="Bold" FontFamily="NunitoBold" />
+                                    </HorizontalStackLayout>
+                                </Frame>
+                            </Grid>
+                        </VerticalStackLayout>
+                        <VerticalStackLayout>
+                            <Frame BorderColor="#F2F2F2" Padding="15,14,17,14" CornerRadius="24">
+                                <Grid ColumnDefinitions="*,Auto">
+                                    <HorizontalStackLayout Grid.Column="0" Spacing="9">
+                                        <Image Source="discount.svg" VerticalOptions="Center" />
+                                        <Label Text="Masukkan Kode Referral" FontSize="16" FontFamily="NunitoBold" FontAttributes="Bold" />
+                                    </HorizontalStackLayout>
+                                    <ImageButton Grid.Column="1" HorizontalOptions="End" Source="arrowright.svg" />
+                                </Grid>
+
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="CodeReferral_Clicked" />
+                                </Frame.GestureRecognizers>
+                            </Frame>
+                        </VerticalStackLayout>
+                    </StackLayout>
+                </ScrollView>
+            </Grid>
+        </StackLayout>
+
+        <VerticalStackLayout VerticalOptions="End" Spacing="10">
+            <HorizontalStackLayout Spacing="10">
+                <CheckBox Color="{StaticResource Primary}" VerticalOptions="Start" />
+                <Label LineBreakMode="WordWrap" WidthRequest="300">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Dengan masuk ke NgaliLagi, anda telah menyetujui " TextColor="#444444" />
+                            <Span Text="Ketentuan dan Kebijakan Privasi" TextColor="{StaticResource Primary}" FontAttributes="Bold" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </HorizontalStackLayout>
+            <Button Text="Daftar Sekarang" 
+                    Padding="0,20,0,20" 
+                    CornerRadius="32" 
+                    FontSize="20" 
+                    FontFamily="NunitoBold" 
+                    FontAttributes="Bold" 
+                    Clicked="RegisterNow_Clicked"
+            />
+        </VerticalStackLayout>
+    </Grid>
+
+</ContentPage>

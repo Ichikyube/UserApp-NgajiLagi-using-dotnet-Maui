@@ -17,7 +17,7 @@
                                  WidthRequest="13"
                                  Clicked="BackImage"/>
                 </Frame>
-                <Label Text="Edit Profile"
+                <Label Text="Edit User"
                    Margin="24,0,0,0"
                    TextColor="#313131"
                    FontAttributes="Bold"

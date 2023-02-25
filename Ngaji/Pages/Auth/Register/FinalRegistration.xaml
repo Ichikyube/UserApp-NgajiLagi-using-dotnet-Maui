@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ngaji.Pages.Auth.Register.FinalRegistration"
+             Shell.TabBarIsVisible="False"
+             Shell.NavBarIsVisible="False"
+             NavigationPage.HasNavigationBar="False"
+             Title="Final Registration">
+    
+    <VerticalStackLayout VerticalOptions="Center" Padding="28,0,28,0">
+        <Image Source="loadingbacaan.svg" WidthRequest="213" HeightRequest="213" Margin="0,0,0,60" />
+        <Label LineBreakMode="WordWrap" WidthRequest="315" TextColor="#313131" HorizontalTextAlignment="Center" Margin="0,0,0,40">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Assalamualaikum " TextColor="#313131" FontSize="28" FontAttributes="Bold" FontFamily="NunitoBold" />
+                    <Span Text="Fulan " TextColor="#F0B70D" FontSize="28" FontAttributes="Bold" FontFamily="NunitoBold" />
+                    <Span  Text="Selamat Datang di NGAJILAGI ..." TextColor="#313131" FontSize="28" FontAttributes="Bold" FontFamily="NunitoBold" />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        <Button Text="Mulai Belajar Ngaji..." 
+                Padding="60,21,60,21" 
+                BackgroundColor="{StaticResource Primary}" 
+                CornerRadius="32" 
+                FontSize="20" 
+                FontFamily="NunitoBold" 
+                FontAttributes="Bold" 
+                Clicked="MulaiBelajarNgaji_Clicked"
+        />
+    </VerticalStackLayout>
+</ContentPage>

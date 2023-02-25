@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ngaji.Pages.Booking.SelectGenderPage"
+             x:Name="SelectGender">
+    <Grid RowDefinitions="Auto,*,Auto" Padding="28,28,28,24">
+        <!-- <VerticalStackLayout
+            Padding="28,30,28,30"> -->
+        <Label
+                    Grid.Row="0"
+                    Text="Pilih Gender"
+                    FontSize="24"
+                    FontFamily="Nunito"
+                    Margin="0,48,0,48"
+                    FontAttributes="Bold"
+                    TextColor="#313131"
+                    HorizontalOptions="Center" 
+                    HorizontalTextAlignment="Center" />
+        <VerticalStackLayout Grid.Row="1" Spacing="15">
+            <Frame
+                        x:Name="fpria_wanita"
+                        Padding="33,30,33,30"
+                        CornerRadius="24"
+                        Background="#FFF">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="SelectPw" NumberOfTapsRequired="1" />
+                </Frame.GestureRecognizers>
+
+                <Label x:Name="pria_wanita" TextColor="#000" LineBreakMode="WordWrap">
+                    <Label.FormattedText Spacing="12">
+                        <FormattedString>
+                            <Span Text="Pria / Wania&#10;" FontAttributes="Bold" FontSize="20"/>
+                            <Span Text="&#10;"></Span>
+                            <Span Text="Ustadz / Ustadzah" FontSize="16" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </Frame>
+            <Frame
+                        x:Name="fpria"
+                        Padding="33,30,33,30"
+                        CornerRadius="24"
+                        Background="#FFF">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="SelectP" NumberOfTapsRequired="1" />
+                </Frame.GestureRecognizers>
+
+                <Label x:Name="pria" TextColor="#000" LineBreakMode="WordWrap">
+                    <Label.FormattedText Spacing="12">
+                        <FormattedString>
+                            <Span Text="Pria&#10;" FontAttributes="Bold" FontSize="20"/>
+                            <Span Text="&#10;"></Span>
+                            <Span Text="Ustadz" FontSize="16" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </Frame>
+            <Frame
+                        x:Name="fwanita"
+                        Padding="33,30,33,30"
+                        CornerRadius="24"
+                        Background="#FFF">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="SelectW" NumberOfTapsRequired="1" />
+                </Frame.GestureRecognizers>
+
+                <Label x:Name="wanita" TextColor="#000" LineBreakMode="WordWrap">
+                    <Label.FormattedText Spacing="12">
+                        <FormattedString>
+                            <Span Text="Wanita&#10;" FontAttributes="Bold" FontSize="20"/>
+                            <Span Text="&#10;"></Span>
+                            <Span Text="Ustadzah" FontSize="16" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </Frame>
+        </VerticalStackLayout>
+        <!-- <StackLayout VerticalOptions="End"> -->
+        <!-- middle controls -->
+        <Button
+                        Grid.Row="2"
+                        x:Name="cariustadz"
+                        Text="Cari Ustadz/ah"
+                        TextColor="#FFF"
+                        Background="#C0C0C0"
+                        Padding="90,20,90,20"
+                        CornerRadius="32"
+                        HorizontalOptions="Fill" />
+        <!-- </StackLayout> -->
+        <!-- </VerticalStackLayout> -->
+    </Grid>
+</ContentPage>

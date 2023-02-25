@@ -13,6 +13,7 @@
                 HeightRequest="213"
             />
             <Label Text="Membuka Bacaanmu" TextColor="#313131" FontFamily="NunitoBold" FontAttributes="Bold" FontSize="24" HorizontalOptions="Center" />
+            <ActivityIndicator IsRunning="True" HeightRequest="40" WidthRequest="40" HorizontalOptions="Center" VerticalOptions="Center" />
         </VerticalStackLayout>
     </FlexLayout>
 

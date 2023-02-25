@@ -1,4 +1,6 @@
 ﻿using Microsoft.Maui.Controls.Compatibility.Hosting;
+using Microsoft.Maui.Platform;
+
 namespace Ngaji;
 public static class MauiProgram
 {
@@ -15,6 +17,8 @@ public static class MauiProgram
                 fonts.AddFont("Nunito-VariableFont_wght.ttf", "Nunito");
                 fonts.AddFont("Nunito-Black.ttf", "Nunito-black");
                 fonts.AddFont("Nunito-ExtraBold.ttf", "Nunito-extrabold");
+                fonts.AddFont("Poppins-Medium.ttf", "Poppins-medium");
+                fonts.AddFont("Poppins-SemiBold.ttf", "Poppins-semibold");
             })
             .ConfigureMauiHandlers(handlers =>
             {
@@ -24,11 +28,16 @@ public static class MauiProgram
             });
         Microsoft.Maui.Handlers.EntryHandler.Mapper.AppendToMapping("CleanEntry", (handler, view) =>
         {
-            #if WINDOWS
-                handler.PlatformView.BorderThickness = new Microsoft.UI.Xaml.Thickness(0);
-            #elif IOSZ
+            #if ANDROID
+                handler.PlatformView.SetBackgroundColor(Android.Graphics.Color.Transparent);
+                handler.PlatformView.Text.PadLeft(24);
+                handler.PlatformView.Left= 24;
+#elif IOS || MACCATALYST
                 handler.PlatformView.BorderStyle = UIKit.UITextBorderStyle.None;
-            #endif
+                handler.PlatformView.BackgroundColor = UIKit.UIColor.Clear;
+#elif WINDOWS
+                handler.PlatformView.BorderThickness = new Microsoft.UI.Xaml.Thickness(0);
+#endif
         });
         return builder.Build();
 	}

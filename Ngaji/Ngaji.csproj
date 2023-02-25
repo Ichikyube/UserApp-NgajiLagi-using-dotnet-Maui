@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net6.0-android;net6.0-ios;net6.0-maccatalyst</TargetFrameworks>
+		<TargetFrameworks>net6.0-ios;net6.0-maccatalyst;net6.0-android31.0</TargetFrameworks>
 		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net6.0-windows10.0.19041.0</TargetFrameworks>
 		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
 		<!-- <TargetFrameworks>$(TargetFrameworks);net6.0-tizen</TargetFrameworks> -->
@@ -39,29 +39,10 @@
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
-    <MauiImage Update="Resources\Images\read.svg" BaseSize="22.41,19" />
-    <MauiImage Update="Resources\Images\sms.svg" BaseSize="19,19" />
-    <MauiImage Update="Resources\Images\notif.svg" BaseSize="18.8,21.45" />
-    <MauiImage Update="Resources\Images\profil.svg" BaseSize="18,18" />
     <MauiImage Update="Resources\Images\title.svg" BaseSize="300,250" />
-    <MauiImage Update="Resources\Images\leftarrow.svg" BaseSize="14.67,8.26" />
-    <MauiImage Update="Resources\Images\search.svg" BaseSize="19,19" />
-    <MauiImage Update="Resources\Images\star.svg" BaseSize="13.3,12.67" />
-    <MauiImage Update="Resources\Images\loc.svg" BaseSize="10.5,15" />
     <MauiImage Update="Resources\Images\logo.svg" BaseSize="34,24" />
-    <MauiImage Update="Resources\Images\calender.svg" />
-    <MauiImage Update="Resources\Images\greenpercent.svg" />
     <MauiImage Update="Resources\Images\logohorizontal.svg" Color="#ffffff" />
-    <MauiImage Update="Resources\Images\percent.svg" />
-    <MauiImage Update="Resources\Images\smallrightarrow.svg" />
-    <MauiImage Update="Resources\Images\time.svg" />
-    <MauiImage Update="Resources\Images\ustadz.svg" />
-    <MauiImage Update="Resources\Images\yellowarrow.svg" />
-    <MauiImage Update="Resources\Images\back.svg" />
-	  <MauiImage Update="Resources\Images\jaket.jpg" />
-	  <MauiImage Update="Resources\Images\Logo.svg" />
-	  <MauiImage Update="Resources\Images\pen.svg" />
-	  <MauiImage Update="Resources\Images\prev.svg" />
+    
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />
 
@@ -70,24 +51,34 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <None Remove="Resources\Images\bell.svg" />
+	  <PackageReference Include="CommunityToolkit.Mvvm" Version="8.1.0" />
+	  <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
 	</ItemGroup>
 
   <ItemGroup>
+    <Compile Update="CustomControls\TimePickerView.xaml.cs">
+      <DependentUpon>TimePickerView.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Pages\Auth\LupaPassword.xaml.cs">
       <DependentUpon>LupaPassword.xaml</DependentUpon>
     </Compile>
     <Compile Update="Pages\Auth\GantiPassword.xaml.cs">
       <DependentUpon>GantiPassword.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Pages\Auth\Register.xaml.cs">
-      <DependentUpon>Register.xaml</DependentUpon>
-    </Compile>
     <Compile Update="Pages\Auth\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Pages\Mengaji\RiwayatMengaji.xaml.cs">
-      <DependentUpon>RiwayatMengaji.xaml</DependentUpon>
+    <Compile Update="Pages\Booking\UstadzProfilePage.xaml.cs">
+      <DependentUpon>UstadzProfilePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\Booking\SelectLevelPage.xaml.cs">
+      <DependentUpon>SelectLevelPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\Booking\SelectGenderPage.xaml.cs">
+      <DependentUpon>SelectGenderPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\Mengaji\RiwayatMengajiPage.xaml.cs">
+      <DependentUpon>RiwayatMengajiPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Pages\Booking\ConfirmPage.xaml.cs">
       <DependentUpon>ConfirmPage.xaml</DependentUpon>
@@ -101,11 +92,17 @@
     <Compile Update="Pages\InboxPage.xaml.cs">
       <DependentUpon>InboxPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Pages\Booking\BookPage.xaml.cs">
-      <DependentUpon>BookPage.xaml</DependentUpon>
+    <Compile Update="Pages\Booking\BookingPage.xaml.cs">
+      <DependentUpon>BookingPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Pages\NotifPage.xaml.cs">
-      <DependentUpon>NotifPage.xaml</DependentUpon>
+    <Compile Update="Pages\Booking\LoadingSchedule.xaml.cs">
+      <DependentUpon>LoadingSchedule.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\PilihBacaan.xaml.cs">
+      <DependentUpon>PilihBacaan.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\NotificationPage.xaml.cs">
+      <DependentUpon>NotificationPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Pages\Profile\EditProfile.xaml.cs">
       <DependentUpon>EditProfile.xaml</DependentUpon>
@@ -113,15 +110,15 @@
     <Compile Update="Pages\Profile\UserProfile.xaml.cs">
       <DependentUpon>UserProfile.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Pages\ReadPage.xaml.cs">
-      <DependentUpon>ReadPage.xaml</DependentUpon>
-    </Compile>
     <Compile Update="CustomControls\CalendarView.xaml.cs">
       <DependentUpon>CalendarView.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
+    <MauiXaml Update="CustomControls\TimePickerView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
     <MauiXaml Update="Login.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
@@ -131,16 +128,28 @@
     <MauiXaml Update="Pages\Auth\GantiPassword.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
-    <MauiXaml Update="Pages\Auth\Register.xaml">
+    <MauiXaml Update="Pages\Booking\UstadzProfilePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Pages\Booking\SelectLevelPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Pages\Booking\SelectGenderPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
     <MauiXaml Update="Pages\LandingPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
-    <MauiXaml Update="Pages\Mengaji\RiwayatMengaji.xaml">
+    <MauiXaml Update="Pages\Mengaji\RiwayatMengajiPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
-    <MauiXaml Update="Pages\Booking\BookPage.xaml">
+    <MauiXaml Update="Pages\Booking\BookingPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Pages\Booking\LoadingSchedule.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Pages\PilihBacaan.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
     <MauiXaml Update="Pages\Profile\EditProfile.xaml">
@@ -149,13 +158,10 @@
     <MauiXaml Update="Pages\Profile\UserProfile.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
-    <MauiXaml Update="Pages\ReadPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
     <MauiXaml Update="Pages\InboxPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
-    <MauiXaml Update="Pages\NotifPage.xaml">
+    <MauiXaml Update="Pages\NotificationPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
     <MauiXaml Update="CustomControls\CalendarView.xaml">

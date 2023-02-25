@@ -41,7 +41,7 @@
                     HeightRequest="44"
                     IsClippedToBounds="True"
                     HasShadow="True" >
-                <Entry  x:Name="email"
+                <Entry  x:Name="txtemail"
                         Placeholder="email..."
                         FontSize="16"
                         FontFamily="Nunito"
@@ -60,7 +60,8 @@
                     HeightRequest="44"
                     IsClippedToBounds="True"
                     HasShadow="True" >
-                <Entry x:Name="password"
+                <Entry x:Name="txtpassword"
+                       BackgroundColor="Transparent"
                        Placeholder="Password..."
                        FontSize="16"
                        FontFamily="Nunito"
@@ -85,7 +86,7 @@
                     VerticalOptions="Center"
                     WidthRequest="320"
                     HeightRequest="56"
-                    Clicked="GotoMainPage"/>
+                    Clicked="Login_Clicked"/>
 
             <Button
                     Text="Lupa Password"

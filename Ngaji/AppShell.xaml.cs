@@ -16,8 +16,9 @@ public partial class AppShell : Shell
         Routing.RegisterRoute("gantipassword", typeof(GantiPassword));
         Routing.RegisterRoute("ngaji-detail", typeof(DetailPage));
         Routing.RegisterRoute("ngaji-consultation", typeof(KonsultasiPage));
-        //Routing.RegisterRoute("loadingbacaan", typeof(LoadingBacaanPage));
-        Routing.RegisterRoute("ngaji-riwayat", typeof(RiwayatMengaji));
+        Routing.RegisterRoute("loadingbacaan", typeof(LoadingBacaanPage));
+        Routing.RegisterRoute("loadingschedule", typeof(LoadingSchedulePage));
+        Routing.RegisterRoute("ngaji-riwayat", typeof(RiwayatMengajiPage));
         Routing.RegisterRoute("ngaji-session", typeof(SesiMengajiPage));
         Routing.RegisterRoute("book-appointment", typeof(BookingPage));
         Routing.RegisterRoute("book-confirm", typeof(ConfirmPage));
