@@ -3,10 +3,43 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Ngaji.Pages.BacaanPage"
              x:Name="PilihBacaan">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <Grid ColumnDefinitions="Auto,Auto" RowDefinitions="86,150,*" ColumnSpacing="12" HorizontalOptions="Center">
+        <Label Text="Pilih Bacaan"
+               FontFamily="Nunito-black"
+               FontSize="28" 
+               LineHeight="38.19"
+               Margin="20"
+               HeightRequest="38"
+               VerticalOptions="Start"
+               HorizontalOptions="Start"/>
+        <Border x:Name="AlQURAN" Grid.Column="0" Grid.Row="1"
+            BackgroundColor="{StaticResource CreamBgAccent}"
+            StrokeShape="RoundRectangle 12"
+            Padding="14,12"
+            VerticalOptions="CenterAndExpand"
+            HorizontalOptions="Center">
+            <Image Source="al_quran.png" Aspect="AspectFit"/>
+        </Border>
+        <Border x:Name="Iqra" Grid.Column="1" Grid.Row="1"
+                BackgroundColor="{StaticResource CreamBgAccent}"
+                StrokeShape="RoundRectangle 12"
+                Padding="29,30" 
+                VerticalOptions="Center"
+                HorizontalOptions="FillAndExpand">
+            <Image Source="iqro.png" Aspect="AspectFill" VerticalOptions="Center" HorizontalOptions="Center"/>
+        </Border>
+        <Label Text="Al-Qur’an" Grid.Row="2" Grid.Column="0"
+               FontFamily="Nunito-black"
+               FontSize="14" 
+               LineHeight="19.1"
+               Margin="12"
+               HorizontalOptions="Center"/>
+        <Label Text="Iqra’" Grid.Row="2" Grid.Column="1"
+               FontFamily="Nunito-black"
+               FontSize="14" 
+               LineHeight="19.1"
+               Margin="12"
+               HorizontalOptions="Center"/>
+    </Grid>
+
 </ContentPage>

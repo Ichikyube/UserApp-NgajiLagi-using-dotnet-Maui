@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:styles="clr-namespace:Ngaji.Resources.Styles"
              Shell.NavBarIsVisible="False"
              x:Class="Ngaji.Pages.Mengaji.SesiMengajiPage">
 
@@ -17,13 +18,24 @@
 
                     <HorizontalStackLayout Margin="0,28,0,28" Spacing="56" VerticalOptions="Center">
                         <Label Text="Sesi Mengaji" FontAttributes="Bold" FontFamily="NunitoBold" FontSize="28" />
-                        <Frame Padding="10" CornerRadius="22" BackgroundColor="#F2F2F2">
-                            <HorizontalStackLayout VerticalOptions="Center" Spacing="8">
-                                <Image Source="time.svg"
-                                WidthRequest="15" HeightRequest="15" />
-                                <Label Text="Riwayat" FontFamily="NunitoBold" FontSize="14" Margin="0,-2,0,0" />
+                        <Border 
+                            WidthRequest="95"
+                            StrokeShape="RoundRectangle 18"
+                            Stroke="Transparent"
+                            BackgroundColor="{StaticResource Gray100}" >
+                            <HorizontalStackLayout VerticalOptions="Center" Margin="8" HorizontalOptions="Center" Spacing="8">
+                                <Image
+                                    WidthRequest="15" HeightRequest="15" >
+                                    <Image.Source>
+                                        <FontImageSource 
+                                            Glyph="{x:Static styles:Icons.history}" 
+                                            Color="Black"
+                                            FontFamily="icomoon"
+                                            FontAutoScalingEnabled="True" />
+                                    </Image.Source></Image>
+                                <Label Text="Riwayat" FontFamily="Nunito" FontAttributes="Bold" FontSize="14" />
                             </HorizontalStackLayout>
-                        </Frame>
+                        </Border>
                     </HorizontalStackLayout>
 
                     <VerticalStackLayout Margin="0,0,0,24">
@@ -32,7 +44,16 @@
                         <Frame Margin="0,12,0,0" Padding="12" CornerRadius="12" BackgroundColor="#88984A">
                             <VerticalStackLayout Spacing="12">
                                 <HorizontalStackLayout Spacing="12">
-                                    <Image Source="user1.png" WidthRequest="74" HeightRequest="103" />
+                                    <Frame BorderColor="Transparent"
+                                        CornerRadius="12"
+                                        WidthRequest="74" 
+                                        HeightRequest="103"
+                                        Padding="0"
+                                        IsClippedToBounds="True"
+                                        HorizontalOptions="Center"
+                                        VerticalOptions="Center">
+                                        <Image Source="avatar.png" Aspect="Fill"/>
+                                    </Frame>
                                     <VerticalStackLayout Spacing="8" VerticalOptions="Center">
                                         <Label Text="Dalene Robertson" FontFamily="NunitoBold" FontAttributes="Bold" FontSize="18" TextColor="#fff" />
                                         <Label Text="QS. Al Baqarah:45" FontFamily="NunitoRegular" FontAttributes="Bold" FontSize="13" TextColor="#fff" />

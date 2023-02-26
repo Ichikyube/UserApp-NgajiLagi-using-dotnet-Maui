@@ -5,7 +5,7 @@
              Shell.TabBarIsVisible="False"
              Shell.NavBarIsVisible="False"
              NavigationPage.HasNavigationBar="False"
-             Title="Create User">
+             Title="Create Profile">
     
     <Grid RowDefinitions="*,Auto" Padding="28">
         <StackLayout Grid.Row="0">
@@ -25,7 +25,7 @@
                         </Frame>
                     </HorizontalStackLayout>
                     <VerticalStackLayout HorizontalOptions="Center" Spacing="14" Margin="0,48,0,24">
-                        <Label Text="Buat User" FontSize="28" HorizontalTextAlignment="Center" FontFamily="NunitoBold" FontAttributes="Bold" />
+                        <Label Text="Buat Profile" FontSize="28" HorizontalTextAlignment="Center" FontFamily="NunitoBold" FontAttributes="Bold" />
                         <Label Text="Lengkapi  formulir dan buat akunmu" HorizontalTextAlignment="Center" TextColor="#7A7585" FontFamily="Nunito" FontSize="14" />
                     </VerticalStackLayout>
                 </VerticalStackLayout>

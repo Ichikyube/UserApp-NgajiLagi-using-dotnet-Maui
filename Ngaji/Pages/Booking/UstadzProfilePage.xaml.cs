@@ -1,8 +1,8 @@
 namespace Ngaji.Pages.Booking;
 
-public partial class User : ContentPage
+public partial class Profile : ContentPage
 {
-	public User()
+	public Profile()
 	{
 		InitializeComponent();
 	}

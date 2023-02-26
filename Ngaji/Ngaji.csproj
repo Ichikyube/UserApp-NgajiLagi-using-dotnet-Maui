@@ -140,6 +140,9 @@
     <MauiXaml Update="Pages\LandingPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
+    <MauiXaml Update="Pages\Ustadz\ListUstadzPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
     <MauiXaml Update="Pages\Mengaji\RiwayatMengajiPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
@@ -165,6 +168,9 @@
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
     <MauiXaml Update="CustomControls\CalendarView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Pages\Ustadz\ProfilePage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
   </ItemGroup>

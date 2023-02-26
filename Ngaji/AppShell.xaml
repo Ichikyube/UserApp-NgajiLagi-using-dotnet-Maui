@@ -74,7 +74,7 @@
                     FontAutoScalingEnabled="True" />
             </Tab.Icon>
             <ShellContent 
-                ContentTemplate="{DataTemplate user:UserProfile}" 
+                ContentTemplate="{DataTemplate profile:UserProfile}" 
                 Route="profilePage" />
         </Tab>
     </TabBar>

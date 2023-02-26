@@ -37,7 +37,7 @@ namespace Ngaji.Data
         public object province { get; set; }
     }
 
-    public class Datum
+    public class User
     {
         public string id { get; set; }
         public string username { get; set; }
@@ -47,7 +47,7 @@ namespace Ngaji.Data
         public bool is_approved { get; set; }
         public string registered_at { get; set; }
         public string updated_at { get; set; }
-        public User user { get; set; }
+        public Profile profile { get; set; }
         public Role role { get; set; }
         public Aggregator Aggregator { get; set; }
         public int? star { get; set; }
@@ -55,7 +55,7 @@ namespace Ngaji.Data
         public List<object> courses { get; set; }
     }
 
-    public class User
+    public class Profile
     {
         public string id { get; set; }
         public string user_id { get; set; }
@@ -90,7 +90,7 @@ namespace Ngaji.Data
 
     public class Root
     {
-        public List<Datum> data { get; set; }
+        public List<User> data { get; set; }
     }
 
     public class Ustadz
